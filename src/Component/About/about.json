@@ -2,14 +2,61 @@
     "name": "Soumya Sambit Mangaraj",
     "email": "smangaraj28@gmail.com",
     "dob": "28-02-1996",
-    "details": "I'm 26 years old currently working as a senior software engineer at PayPal. I like to learn new things. Being knowledgeable about any subject is an ongoing process, and I’m always proactive about seeking new opportunities to develop and grow in my role",
-    "profile": {
+    "title": "Software Engineer",
+    "company": "PayPal",
+    "resume": "",
+    "address": "",
+    "mapLink": "",
+    "details": "I'm currently working as a senior software engineer at PayPal. I like to learn new things. Being knowledgeable about any subject is an ongoing process, and I’m always proactive about seeking new opportunities to develop and grow in my role",
+    "employement": [
+        {
+            "company": "",
+            "startPeriod": "",
+            "endingPeriod": "",
+            "description": "",
+            "awards": ""
+        },
+        {
+            "company": "",
+            "startPeriod": "",
+            "endingPeriod": "",
+            "description": "",
+            "awards": ""
+        }
+    ],
+    "profileLinks": {
         "linkedin": "",
-        "github": "",
         "facebook": "",
-        "whatsapp": "",
         "instagram": "",
+        "whatsapp": "",
+        "twitter": "",
+        "github": "",
         "stackblitz": "",
         "sandbox": ""
-    }
+    },
+    "projects": {
+        "mega": [
+            {
+                "title": "",
+                "description": "",
+                "skills": "",
+                "link": ""
+            }
+        ],
+        "mini": [
+            {
+                "title": "",
+                "description": "",
+                "skills": "",
+                "link": ""
+            }
+        ]
+    },
+    "skills": [
+        {
+            "name": "",
+            "efficiency": "",
+            "description": ""
+        }
+    ]
 }

@@ -30,7 +30,7 @@ export default function () {
         <div>
           <iframe
             title="map"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d55010.59071004668!2d75.97672930149307!3d17.645578173170737!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5dbe6796b75a3%3A0xe1423a39182882ff!2sNew%20vidi%20garkul%2C%20Maharashtra%20413006!5e1!3m2!1sen!2sin!4v1602495791273!5m2!1sen!2sin"
+            src="https://www.google.com/maps/place/Khordha,+Odisha+752057/@20.1747172,85.619809,19z/data=!3m1!4b1!4m21!1m15!4m14!1m6!1m2!1s0x3a19ad05039d8afb:0xa5a807202686e206!2sNabinabag+Chaka,+Khordha,+Odisha!2m2!1d85.6191644!2d20.1748079!1m6!1m2!1s0x3bc5dbe6796b75a3:0xe1423a39182882ff!2sNew+vidi+garkul+Maharashtra+413006!2m2!1d75.9739003!2d17.6460579!3m4!1s0x3a19aca3d2b8d0c9:0xf6942d8ff9120bf8!8m2!3d20.1747159!4d85.6203563"
             frameborder="0"
             className="map"
             allowfullscreen

@@ -78,40 +78,6 @@ export default () => {
               Lang: "React js",
               content:
                 "Personal information about myself , just like different projects information about resuming and more.."
-            },
-            {
-              Title: "Resume/cv",
-              link: "https://stellular-cucurucho-1e21ec.netlify.app/",
-              Lang: "React js",
-              content:
-                "This project contence resume/cv made using react js and we can download resume in pdf"
-            },
-            {
-              Title: "wedding card",
-              link: "https://reverent-golick-04598a.netlify.app",
-              Lang: "React js",
-              content:
-                "brothers wedding card hosted in website fully resposive works in diffrent size of screen"
-            },
-            {
-              Title: "authontication using javascript",
-              link: "https://ju7i18.csb.app/Login",
-              Lang: "React js",
-              content:
-                "In this project user can sign in and sign up Features (responsive , attractive ui and ux, animations, authontication using regex)"
-            },
-            {
-              Title: "blog(web dev)",
-              link: "https://lucky0011198.github.io/web-development-blog/",
-              Lang: "React js",
-              content: "blog  about web development basics "
-            },
-            {
-              Title: "blog(android device managment)",
-              link:
-                "https://lucky0011198.github.io/android-device-managment-blog/",
-              Lang: "html/css/js",
-              content: "blog about how to manage android device "
             }
           ].map((i) => (
             <div class="grid-item">
