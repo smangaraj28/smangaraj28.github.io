@@ -7,6 +7,7 @@ import {
   MdLaunch,
   MdLink
 } from "react-icons/md";
+import React from 'react';
 import { FiExternalLink } from "react-icons/fi";
 export default () => {
   return (

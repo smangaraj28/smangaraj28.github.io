@@ -47,9 +47,8 @@ export default function () {
         </h1>
         <div className="About-containt">
           <p>
-            My name is Soumya Sambit Mangaraj, I’m 26 years old and I am
-            currently working as a senior software engineer at PayPal. I like to
-            learn new things. Being knowledgeable about any subject is an
+            I’m 26 years old currently working as a senior software engineer at PayPal.
+             I like to learn new things. Being knowledgeable about any subject is an
             ongoing process, and I’m always proactive about seeking new
             opportunities to develop and grow in my role
           </p>{" "}
