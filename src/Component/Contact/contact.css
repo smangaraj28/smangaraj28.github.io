@@ -1,0 +1,195 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+}
+main .App,
+.App2 {
+  padding: 6rem;
+  width: 700px;
+  height: 70%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+main .map {
+  width: 100%;
+  height: 50vh;
+}
+main .App h1,
+.App2 h1 {
+  font-weight: 900;
+  font-size: 1.5em;
+  font-family: Varela Round;
+  font-size: 2rem;
+}
+main .App p,
+.App2 p,
+label,
+.row {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: rgb(189, 186, 186);
+}
+main .App p a,
+.App2 p a {
+  color: #00ffc8;
+  font-family: Varela Round;
+}
+main .App .G-btn,
+.App2 .G-btn,
+button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 0.3rem;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  font-weight: bold;
+  font-family: Varela Round;
+}
+main .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  margin-top: 1rem;
+  font-weight: 400;
+  font-family: Varela Round;
+}
+main .hr-text:before {
+  content: "";
+  background: #ddd;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+main .hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  color: #818078;
+  background-color: #fcfcfa;
+}
+main .App form,
+.App2 form {
+  display: flex;
+  flex-flow: column wrap;
+}
+input,
+textarea {
+  padding: 0.9rem 1rem 0.9rem 1rem;
+  border: 1.7px solid #ddd;
+  border-radius: 0.4rem;
+  /* position: relative; */
+  outline: none;
+}
+main form textarea {
+  padding-left: 1rem;
+  font-family: Varela Round;
+  font-weight: 500;
+}
+main form input:focus,
+main form textarea:focus {
+  border: #00ffc8 2px solid;
+  transition-duration: 0.2s;
+  transition-delay: 0.1s;
+  box-shadow: #ddd;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(190, 190, 190);
+}
+
+form label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 550;
+  font-family: Varela Round;
+  padding: 0.8rem 0rem 0.6rem 0rem;
+}
+form .i {
+  font-size: 1.3rem;
+  color: rgb(121, 118, 118);
+}
+/* .usericon {
+  position: absolute;
+  top: 35%;
+  left: 4%;
+} */
+
+main form button[type="submit"] {
+  background-color: #00ffc8;
+  color: white;
+  font-size: 1rem;
+  border: none;
+}
+main form button[type="submit"]:hover {
+  box-shadow: rgba(59, 130, 143, 0.247) 0px 10px 20px,
+    rgba(58, 74, 75, 0.26) 0px 6px 6px;
+}
+
+main .container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: fit-content;
+}
+.hero {
+  width: 650px;
+  background-color: rgba(255, 255, 255, 0.199);
+}
+/* #Contact {
+  padding-top: 10rem;
+} */
+
+@media only screen and (max-width: 1000px) {
+  .App {
+    padding-top: 1rem;
+  }
+  main .App,
+  .App2 {
+    padding: 0%;
+    margin: 0%;
+    width: 90%;
+    height: 50%;
+  }
+
+  main {
+    padding: 0%;
+    margin-top: 4rem;
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+  main .App h1,
+  .App2 h1 {
+    margin-top: 2rem;
+    font-size: 1.7em;
+  }
+}
