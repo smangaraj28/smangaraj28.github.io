@@ -12,7 +12,7 @@ export default () => {
         </h2>
       </div>
       <div className="Skills">
-        <div class="grid-container">
+        <div className="grid-container">
           {[
             {
               content:
@@ -39,7 +39,7 @@ export default () => {
               per: "85%"
             }
           ].map((i) => (
-            <div class="grid-item">
+            <div className="grid-item">
               <div className="Cards">
                 <div className="Card-header">
                   <h2>

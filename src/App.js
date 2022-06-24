@@ -23,7 +23,7 @@ export default function App() {
         <Navbar />
       </div>
       <Footer />
-      <div class="navbar">
+      <div className="navbar">
         <BottomNavbar />
       </div>
     </>

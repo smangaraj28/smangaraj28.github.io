@@ -63,13 +63,13 @@ export default function Home() {
         // style={{ background: dark ? "#ffffff1e" : "white" }}
       >
         <h1>
-          {user.Home.name.split(" ")[0]}{" "}
+          {user.personal.name.split(" ")[0]}{" "}
           <span style={{ color: dark ? "#4a4854" : "#0508be67" }}>
-            {user.Home.name.split(" ")[1]}
+            {user.personal.name.split(" ")[1]}
           </span>
           <p>
             {" "}
-            {user.Home.keywords[0]} , {user.Home.keywords[1]}{" "}
+            {user.personal.keywords[0]} , {user.personal.keywords[1]}{" "}
           </p>
         </h1>
         <div className="p-box">
@@ -106,7 +106,7 @@ export default function Home() {
         <div style={{ paddingTop: "1rem" }}>
           <h1>
             {" "}
-            <p>current status</p>
+            <p>SDE 2 at PayPal</p>
           </h1>
           <button
             className="current-status"
@@ -123,7 +123,7 @@ export default function Home() {
                 color: dark ? "#ffff" : "#191919"
               }}
             />
-            <span>{user.Home.currentStatus}</span>
+            <span>{user.personal.currentStatus}</span>
           </button>
         </div>
         <br />

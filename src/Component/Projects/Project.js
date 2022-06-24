@@ -22,7 +22,7 @@ export default () => {
         </div>
         <strong> Mega Project</strong> <hr />
         <div className="megaprojects">
-          <div class="grid-item">
+          <div className="grid-item">
             <div className="Cards">
               <div className="Card-header">
                 {/* <div className="card-avatar" /> */}
@@ -70,7 +70,7 @@ export default () => {
       </section>
 
       <div className="Skills">
-        <div class="grid-container">
+        <div className="grid-container">
           {[
             {
               Title: "Personal Portfolio",
@@ -80,7 +80,7 @@ export default () => {
                 "Personal information about myself , just like different projects information about resuming and more.."
             }
           ].map((i) => (
-            <div class="grid-item">
+            <div className="grid-item">
               <div className="Cards">
                 <div className="Card-header">
                   {/* <div className="card-avatar">

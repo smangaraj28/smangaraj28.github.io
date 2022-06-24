@@ -81,7 +81,7 @@ export default function () {
             <MdOutlineSwapHoriz className="sm" />
           </button>
           <button
-            classname="blure"
+            className="blure"
             onClick={() => {
               setBlure(!Blure);
             }}
