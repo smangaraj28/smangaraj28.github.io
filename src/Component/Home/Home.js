@@ -10,9 +10,9 @@ import {
 } from "react-icons/md";
 import { BsLightningCharge } from "react-icons/bs";
 
-import Context from "../Data/data";
+import Context from "../../Data/data";
 import Window from "./Window";
-import hero from "../assets/034.png";
+import hero from "../../assets/034.png";
 
 export default function Home() {
   const [dark, setdark] = useState(false);

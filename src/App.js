@@ -8,8 +8,10 @@ import Project from "./Component/Projects/Project";
 import Contact from "./Component/Contact/Contact";
 import BottomNavbar from "./Component/Navbar/BottomNavbar";
 import Footer from "./Component/Footer";
+import Context from "./Data/data";
 
 export default function App() {
+  
   return (
     <>
       {/* <Model /> */}

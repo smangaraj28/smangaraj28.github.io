@@ -1,7 +1,7 @@
 import "../Home/Home.css";
 import { useState } from "react";
 import { FiFacebook, FiTwitter } from "react-icons/fi";
-import aboutimg from "../assets/036.png";
+import aboutimg from "../../assets/036.png";
 import { MdPersonOutline, MdOutlineEvent } from "react-icons/md";
 import { BiMailSend } from "react-icons/bi";
 import {
@@ -55,42 +55,44 @@ export default function () {
         </div>
         <div className="main-table">
           <table>
-            <tr>
-              <td>
-                <MdPersonOutline className="avatar" />{" "}
-              </td>
-              <td>Soumya Sambit Mangaraj </td>
-            </tr>
-            <tr>
-              <td>
-                {" "}
-                <BiMailSend className="avatar" />{" "}
-              </td>
-              <td> smangaraj28@gmail.com </td>
-            </tr>
-            <tr>
-              <td>
-                <MdOutlineEvent className="avatar" />{" "}
-              </td>
-              <td> 28-02-1996 </td>
-
-              <tr></tr>
-              <tr className="tag">
+            <tbody>
+              <tr>
                 <td>
-                  <b>
-                    {" "}
-                    <BsLightningCharge className="avatar" />
-                  </b>
+                  <MdPersonOutline className="avatar" />{" "}
                 </td>
-                <td>
-                  Age
-                  <b>{age()}</b>
-                </td>
-                <td>
-                  <b></b>
-                </td>
+                <td>Soumya Sambit Mangaraj </td>
               </tr>
-            </tr>
+              <tr>
+                <td>
+                  {" "}
+                  <BiMailSend className="avatar" />{" "}
+                </td>
+                <td> smangaraj28@gmail.com </td>
+              </tr>
+              <tr>
+                <td>
+                  <MdOutlineEvent className="avatar" />{" "}
+                </td>
+                <td> 28-02-1996 </td>
+
+                <tr></tr>
+                <tr className="tag">
+                  <td>
+                    <b>
+                      {" "}
+                      <BsLightningCharge className="avatar" />
+                    </b>
+                  </td>
+                  <td>
+                    Age
+                    <b>{age()}</b>
+                  </td>
+                  <td>
+                    <b></b>
+                  </td>
+                </tr>
+              </tr>
+            </tbody>
           </table>
           <hr />
           <br />
