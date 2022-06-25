@@ -1,23 +1,19 @@
 import "../Home/Home.css";
 import { useState } from "react";
-import { FiFacebook, FiTwitter } from "react-icons/fi";
 import aboutimg from "../../assets/036.png";
 import { MdPersonOutline, MdOutlineEvent } from "react-icons/md";
 import { BiMailSend } from "react-icons/bi";
-import {
-  BsWhatsapp,
-  BsInstagram,
-  BsLightningCharge,
-  BsLinkedin
-} from "react-icons/bs";
+import { BsLightningCharge } from "react-icons/bs";
+import Links from "../../Component/Links/Links";
 
-export default function () {
+export default function (props) {
   const [dark, setdark] = useState(false);
   const [Age, setAge] = useState("");
-
+  const { name, details, email, dob } =props?.personal;
+  const links = props?.links;
   const age = () => {
     let d = new Date();
-    var agenow = d.getFullYear() - 2001 - 1;
+    var agenow = d.getFullYear() - 1996 - 1;
     if (d.getFullYear() >= 7) {
       agenow = agenow + 1;
     }
@@ -47,10 +43,7 @@ export default function () {
         </h1>
         <div className="About-containt">
           <p>
-            I’m 26 years old currently working as a senior software engineer at PayPal.
-             I like to learn new things. Being knowledgeable about any subject is an
-            ongoing process, and I’m always proactive about seeking new
-            opportunities to develop and grow in my role
+            {details}
           </p>{" "}
         </div>
         <div className="main-table">
@@ -60,20 +53,20 @@ export default function () {
                 <td>
                   <MdPersonOutline className="avatar" />{" "}
                 </td>
-                <td>Soumya Sambit Mangaraj </td>
+                <td>{name} </td>
               </tr>
               <tr>
                 <td>
                   {" "}
                   <BiMailSend className="avatar" />{" "}
                 </td>
-                <td> smangaraj28@gmail.com </td>
+                <td> {email} </td>
               </tr>
               <tr>
                 <td>
                   <MdOutlineEvent className="avatar" />{" "}
                 </td>
-                <td> 28-02-1996 </td>
+                <td> {dob} </td>
 
                 <tr></tr>
                 <tr className="tag">
@@ -110,27 +103,7 @@ export default function () {
               <MdOutlineFileDownload style={{ fontSize: "24px" }} />
             </span>
           </button> */}
-
-          <button className="avatar">
-            <a href="https://www.linkedin.com/in/soumya-sambit-mangaraj/">
-              <BsLinkedin style={{ fontSize: "1.5rem" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href="https://www.instagram.com/soumyasambitmangaraj/">
-              <BsInstagram style={{ fontSize: "1.5rem" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href="https://www.facebook.com/soumyasambit.mangaraj/">
-              <FiFacebook style={{ fontSize: "1.5rem" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href="https://www.facebook.com/ganesh.varkal.3">
-              <FiTwitter style={{ fontSize: "1.5rem" }} />
-            </a>
-          </button>
+          <Links {...links}></Links>
         </div>
       </div>
     </div>

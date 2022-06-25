@@ -8,19 +8,20 @@ import Project from "./Component/Projects/Project";
 import Contact from "./Component/Contact/Contact";
 import BottomNavbar from "./Component/Navbar/BottomNavbar";
 import Footer from "./Component/Footer";
+import { useContext } from "react";
 import Context from "./Data/data";
 
 export default function App() {
-  
+  const user = useContext(Context);
   return (
     <>
       {/* <Model /> */}
       {/* <Topnav /> */}
-      <Home />
-      <About />
-      <Skills />
-      <Project />
-      <Contact />
+      <Home {...user.personal}/>
+      <About personal={user.personal} links={user.links}/>
+      <Skills skills={user.skills}/>
+      <Project {...user.projects}/>
+      <Contact {...user.personal}/>
       <div className="navC">
         <Navbar />
       </div>

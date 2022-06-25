@@ -1,6 +1,6 @@
 import "./Home.css";
 import "./window.css";
-import { useState, useContext, createContext } from "react";
+import { useState } from "react";
 import { FiLinkedin, FiGithub, FiCodesandbox } from "react-icons/fi";
 import {
   MdOutlineNearMe,
@@ -9,14 +9,11 @@ import {
   MdEast
 } from "react-icons/md";
 import { BsLightningCharge } from "react-icons/bs";
-
-import Context from "../../Data/data";
 import Window from "./Window";
 import hero from "../../assets/034.png";
 
-export default function Home() {
+export default function Home({name, keywords, currentStatus}) {
   const [dark, setdark] = useState(false);
-  const user = useContext(Context);
 
   const ListIcons = [
     <FiLinkedin color={dark ? "white" : "#688bff"} />,
@@ -26,7 +23,6 @@ export default function Home() {
     <BsLightningCharge />,
     <FiCodesandbox />
   ];
-  // console.log(user);
   return (
     <section
       className="Home"
@@ -63,13 +59,13 @@ export default function Home() {
         // style={{ background: dark ? "#ffffff1e" : "white" }}
       >
         <h1>
-          {user.personal.name.split(" ")[0]}{" "}
+          {name.split(" ")[0]}{" "}
           <span style={{ color: dark ? "#4a4854" : "#0508be67" }}>
-            {user.personal.name.split(" ")[1]}
+            {name.split(" ")[1]}
           </span>
           <p>
             {" "}
-            {user.personal.keywords[0]} , {user.personal.keywords[1]}{" "}
+            {keywords[0]} , {keywords[1]}{" "}
           </p>
         </h1>
         <div className="p-box">
@@ -123,7 +119,7 @@ export default function Home() {
                 color: dark ? "#ffff" : "#191919"
               }}
             />
-            <span>{user.personal.currentStatus}</span>
+            <span>{currentStatus}</span>
           </button>
         </div>
         <br />

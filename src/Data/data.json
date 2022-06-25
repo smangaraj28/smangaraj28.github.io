@@ -29,14 +29,14 @@
         }
     ],
     "links": {
-        "linkedin": "",
-        "facebook": "",
-        "instagram": "",
+        "linkedin": "https://www.linkedin.com/in/soumya-sambit-mangaraj/",
+        "facebook": "https://www.facebook.com/soumyasambit.mangaraj/",
+        "instagram": "https://www.instagram.com/soumyasambitmangaraj/",
         "whatsapp": "",
         "twitter": "",
-        "github": "",
-        "stackblitz": "",
-        "sandbox": ""
+        "github": "https://github.com/smangaraj28",
+        "stackblitz": "https://stackblitz.com/@smangaraj28",
+        "sandbox": "https://codesandbox.io/u/smangaraj28"
     },
     "projects": {
         "mega": [
@@ -58,9 +58,24 @@
     },
     "skills": [
         {
-            "name": "",
-            "efficiency": "",
-            "description": ""
+            "title": "Python",
+            "efficiency": "80%",
+            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
+        },
+        {
+            "title": "Javascript",
+            "efficiency": "70%",
+            "description": "Advance level Javascript"
+        },
+        {
+            "title": "Java",
+            "efficiency": "90%",
+            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
+        },
+        {
+            "title": "React",
+            "efficiency": "60%",
+            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
         }
     ]
 }
