@@ -1,28 +1,21 @@
 import "./Home.css";
 import "./window.css";
 import { useState } from "react";
-import { FiLinkedin, FiGithub, FiCodesandbox } from "react-icons/fi";
 import {
-  MdOutlineNearMe,
-  MdOutlineAddchart,
   MdOutlineFileDownload,
-  MdEast
+  MdWork
 } from "react-icons/md";
-import { BsLightningCharge } from "react-icons/bs";
 import Window from "./Window";
 import hero from "../../assets/034.png";
+import Links from "../Links/Links";
+import { BsPaypal } from "react-icons/bs";
 
-export default function Home({name, keywords, currentStatus}) {
+export default function Home(props) {
   const [dark, setdark] = useState(false);
 
-  const ListIcons = [
-    <FiLinkedin color={dark ? "white" : "#688bff"} />,
-    <FiGithub />,
-    <BsLightningCharge />,
-    <FiCodesandbox />,
-    <BsLightningCharge />,
-    <FiCodesandbox />
-  ];
+  const { name, keywords, currentStatus } =props?.personal;
+  const links = props?.links;
+
   return (
     <section
       className="Home"
@@ -59,96 +52,41 @@ export default function Home({name, keywords, currentStatus}) {
         // style={{ background: dark ? "#ffffff1e" : "white" }}
       >
         <h1>
-          {name.split(" ")[0]}{" "}
-          <span style={{ color: dark ? "#4a4854" : "#0508be67" }}>
-            {name.split(" ")[1]}
-          </span>
-          <p>
-            {" "}
-            {keywords[0]} , {keywords[1]}{" "}
-          </p>
+            {name.split(" ")[0]}{" "}
+            <span style={{ color: dark ? "#4a4854" : "#0508be67" }}>
+              {name.split(" ")[1]}
+            </span>{" "}
+            {name.split(" ")[2]}
+            <p>
+              {keywords.map(txt => <span style={{ color: "green" }}>{txt + " "}</span>)}
+            </p>
         </h1>
         <div className="p-box">
-          {[
-            {
-              color: dark ? "#4a4854" : "#0000ff17",
-              path: "https://www.linkedin.com/in/soumya-sambit-mangaraj/"
-            },
-            {
-              color: dark ? "#ddd" : "#00000013",
-              path: "https://github.com/smangaraj28"
-            },
-            {
-              color: dark ? "#ddd" : "#40ffa623",
-              path: "https://stackblitz.com/@smangaraj28"
-            },
-            {
-              color: "#ddd",
-              path: "https://codesandbox.io/u/smangaraj28"
-            }
-          ].map((item, i) => (
-            <a href={item.path}>
-              <div
-                className="s-button"
-                style={{ background: item.color }}
-                key={i}
-              >
-                {ListIcons[i]}
-              </div>
-            </a>
-          ))}
+          <Links {...links}></Links>
         </div>
-
-        <div style={{ paddingTop: "1rem" }}>
-          <h1>
-            {" "}
-            <p>SDE 2 at PayPal</p>
-          </h1>
-          <button
-            className="current-status"
-            style={{
-              backgroundColor: dark ? "#4a4854" : "#DDD",
-              color: dark ? "#ffff" : "black",
-              fontWeight: dark ? "200" : "700"
-            }}
-          >
-            <MdOutlineAddchart
+        <br />
+        <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
+            <MdWork
               style={{
                 fontSize: "50px",
                 marginRight: "0.6rem",
-                color: dark ? "#ffff" : "#191919"
+                color: dark ? "#ffff" : "blue"
               }}
             />
-            <span>{currentStatus}</span>
-          </button>
-        </div>
-        <br />
-        <div className="buttons-grup">
-          {/* <button>
-            <span>explore more</span>
-            <span>
-              <MdOutlineNearMe />
-            </span>
-          </button> */}
-
-          <button>
-            <span>Download Resume</span>
-            <span>
-              <MdOutlineFileDownload style={{ fontSize: "24px" }} />
-            </span>
-          </button>
+            <span>{currentStatus} <BsPaypal style={{ fontSize: "1rem" }} /> </span>
+            <div className="buttons-grup" style={{justifyContent: "space-around"}}>
+              <button>
+                <span>Resume</span>
+                <span>
+                  <MdOutlineFileDownload style={{ fontSize: "24px" }} />
+                </span>
+              </button>
+            </div>
         </div>
       </div>
 
-      <div
-        className="hero"
-        style={{ backgroundColor: dark ? "#4a4854" : "none" }}
-      >
+      <div className="hero" style={{ backgroundColor: dark ? "#4a4854" : "none" }}>
         <img src={hero} width="80%" alt="bscjhdh" />
-        <div>
-          {/* <FiLinkedin className="switch" /> */}
-          {/* <MdEast className="switch" /> */}
-        </div>
       </div>
       <div>
         <Window />

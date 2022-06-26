@@ -17,7 +17,7 @@ export default function App() {
     <>
       {/* <Model /> */}
       {/* <Topnav /> */}
-      <Home {...user.personal}/>
+      <Home personal={user.personal} links={user.links}/>
       <About personal={user.personal} links={user.links}/>
       <Skills skills={user.skills}/>
       <Project {...user.projects}/>
