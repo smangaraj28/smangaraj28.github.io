@@ -3,9 +3,7 @@ import "../../styles.css";
 import "./Projects.css";
 import {
   MdOutlineAssignmentInd,
-  MdOutlineLabel,
-  MdLaunch,
-  MdLink
+  MdOutlineLabel
 } from "react-icons/md";
 import React from 'react';
 import { FiExternalLink } from "react-icons/fi";

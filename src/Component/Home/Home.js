@@ -88,10 +88,10 @@ export default function Home(props) {
       <div className="hero" style={{ backgroundColor: dark ? "#4a4854" : "none" }}>
         <img src={hero} width="80%" alt="bscjhdh" />
       </div>
-      <div>
+      {/* <div>
         <Window />
         <br />
-      </div>
+      </div> */}
     </section>
   );
 }
