@@ -41,18 +41,19 @@
     "projects": {
         "mega": [
             {
-                "title": "",
-                "description": "",
-                "skills": "",
-                "link": ""
+                "title": "Universal Hotel Solution",
+                "description": "Developed this project using Angular8 & Python Flask Framework with PostgreSQL having Travis CI Pipeline with Docker containerization for providing management solutions from small to large scale hotels. Implemented 3 way databinding using Angular & Firebase. Architected Authentication for web Application using OAuth2 and JSON web tokens (JWT).Wrote Testing Suite to validate each UI level operation.",
+                "skills": "Lang - React native",
+                "link": "https://docs.google.com/document/d/1ceKJlsidtzayzkLIDJIm-9Jag0rtBMr205f-gP-1cO8/edit?usp=sharing",
+                "year": "final year Project"
             }
         ],
         "mini": [
             {
-                "title": "",
-                "description": "",
-                "skills": "",
-                "link": ""
+                "title": "Personal Portfolio",
+                "description": "Personal information about myself , just like different projects information about resuming and more..",
+                "skills": "React js",
+                "link": "https://gksjfg.csb.app/"
             }
         ]
     },
