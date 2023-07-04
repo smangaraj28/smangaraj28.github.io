@@ -7,42 +7,42 @@ export default function Links({linkedin, facebook, instagram, whatsapp,
   return (
       <>
          <button className="avatar">
-            <a href={linkedin}>
+            <a href={linkedin} target="_blank">
               <BsLinkedin style={{ fontSize: "1.5rem", color: "blue" }} />
             </a>
           </button>
           <button className="avatar">
-            <a href={instagram}>
+            <a href={instagram} target="_blank">
               <BsInstagram style={{ fontSize: "1.5rem", color: "red" }} />
             </a>
           </button>
           <button className="avatar">
-            <a href={facebook}>
+            <a href={facebook} target="_blank">
               <FiFacebook style={{ fontSize: "1.5rem", color: "blue" }} />
             </a>
           </button>
           <button className="avatar">
-            <a href={twitter}>
+            <a href={twitter} target="_blank">
               <FiTwitter style={{ fontSize: "1.5rem", color: "skyblue" }} />
             </a>
           </button>
           <button className="avatar">
-            <a href={github}>
+            <a href={github} target="_blank">
               <FiGithub style={{ fontSize: "1.5rem", color: "black" }} />
             </a>
           </button>
           <button className="avatar">
-            <a href={whatsapp}>
+            <a href={whatsapp} target="_blank">
               <BsWhatsapp style={{ fontSize: "1.5rem", color: "green" }} />
             </a>
           </button>
           <button className="avatar">
-            <a href={sandbox}>
+            <a href={sandbox} target="_blank">
               <FiCodesandbox style={{ fontSize: "1.5rem", color: "blueviolet" }} />
             </a>
           </button>
           <button className="avatar">
-            <a href={stackblitz}>
+            <a href={stackblitz} target="_blank">
               <BsLightningCharge style={{ fontSize: "1.5rem", color: "brown" }} />
             </a>
           </button>

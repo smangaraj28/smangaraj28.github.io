@@ -76,10 +76,12 @@ export default function Home(props) {
             <span>{currentStatus} </span>
             <div className="buttons-grup" style={{justifyContent: "space-around"}}>
               <button>
-                <span>Resume</span>
-                <span>
-                  <MdOutlineFileDownload style={{ fontSize: "24px" }} />
-                </span>
+                <a href={props.personal.resumeLink} target="_blank">
+                  <span>Resume</span>
+                  <span href={props.personal.resumeLink}>
+                    <MdOutlineFileDownload style={{ fontSize: "24px" }}  />
+                  </span>
+                </a>
               </button>
             </div>
         </div>
