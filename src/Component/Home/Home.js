@@ -8,7 +8,7 @@ import {
 import Window from "./Window";
 import hero from "../../assets/034.png";
 import Links from "../Links/Links";
-import { BsPaypal } from "react-icons/bs";
+// import { Bs } from "react-icons/bs";
 
 export default function Home(props) {
   const [dark, setdark] = useState(false);
@@ -73,7 +73,7 @@ export default function Home(props) {
                 color: dark ? "#ffff" : "blue"
               }}
             />
-            <span>{currentStatus} <BsPaypal style={{ fontSize: "1rem" }} /> </span>
+            <span>{currentStatus} </span>
             <div className="buttons-grup" style={{justifyContent: "space-around"}}>
               <button>
                 <span>Resume</span>
