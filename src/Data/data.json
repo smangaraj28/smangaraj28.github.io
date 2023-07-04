@@ -6,7 +6,7 @@
         "title": "Software Engineer",
         "company": "Goldman Sachs",
         "resumeLink": "https://drive.google.com/file/d/1OhEx2sSWkRf03yorIz6WS-BRKGURwRKj/view?usp=sharing",
-        "address": "",
+        "address": "Mangaraj Bhavan, Near Park Land Hospital, Khordha, Odisha, India, 752055",
         "mapLink": "",
         "keywords": ["Engineer by Profession 🧑🏽‍💻 & Teacher by Passion ❤️"],
         "currentStatus": "Senior Software Engineer at Goldman Sachs",
@@ -14,18 +14,40 @@
     },
     "employement": [
         {
-            "company": "",
-            "startPeriod": "",
-            "endingPeriod": "",
+            "company": "ADP",
+            "designation": "Full Stack Developer",
+            "startPeriod": "Aug-2018",
+            "endingPeriod": "Dec-2020",
             "description": "",
-            "awards": ""
+            "awards": "",
+            "techstack": "Java, Springboot, AWS, Angular JS"
         },
         {
-            "company": "",
-            "startPeriod": "",
+            "company": "Delhivery",
+            "designation": "Full Stack Developer",
+            "startPeriod": "Jan-2021",
+            "endingPeriod": "Oct-2021",
+            "description": "",
+            "awards": "",
+            "techstack": "Python, Django, AWS, Java, Springboot, Node Js"
+        },
+        {
+            "company": "PayPal",
+            "designation": "Senior Software Developement Engineer",
+            "startPeriod": "Oct-2021",
+            "endingPeriod": "May-2023",
+            "description": "",
+            "awards": "",
+            "techstack": "Java, Springboot, Node Js, React, GCP"
+        },
+        {
+            "company": "Goldman Sachs",
+            "designation": "Senior Software Developement Engineer",
+            "startPeriod": "May-2023",
             "endingPeriod": "",
             "description": "",
-            "awards": ""
+            "awards": "",
+            "techstack": "Java, Springboot, Big Data, Hadoop, MapReduce, HBase, HDFS"
         }
     ],
     "links": {
@@ -75,6 +97,26 @@
         },
         {
             "title": "React",
+            "efficiency": "80%",
+            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
+        },
+        {
+            "title": "Springboot",
+            "efficiency": "80%",
+            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
+        },
+        {
+            "title": "Hadooop",
+            "efficiency": "60%",
+            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
+        },
+        {
+            "title": "Hbase",
+            "efficiency": "60%",
+            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
+        },
+        {
+            "title": "MapReduce",
             "efficiency": "60%",
             "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
         }
