@@ -8,7 +8,7 @@ import {
 import Window from "./Window";
 import hero from "../../assets/034.png";
 import Links from "../Links/Links";
-// import { Bs } from "react-icons/bs";
+import profileimg from "../../assets/profile.jpeg";
 
 export default function Home(props) {
   const [dark, setdark] = useState(false);
@@ -51,19 +51,25 @@ export default function Home(props) {
         className="header"
         // style={{ background: dark ? "#ffffff1e" : "white" }}
       >
+      <div>
+        <img src={profileimg} width="30%" alt="mangaraj" />
+      </div>
         <h1>
             {name.split(" ")[0]}{" "}
             <span style={{ color: dark ? "#4a4854" : "#0508be67" }}>
               {name.split(" ")[1]}
             </span>{" "}
             {name.split(" ")[2]}
-            <p>
-              {keywords.map(txt => <span style={{ color: "green" }}>{txt + " "}</span>)}
-            </p>
         </h1>
+        <br></br>
+        <p>
+            {keywords.map(txt => <span style={{ color: "green", fontSize: "0.8rem" }}>{txt + " "}</span>)}
+        </p>
         <div className="p-box">
           <Links {...links}></Links>
         </div>
+        <br />
+        <br />
         <br />
         <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
             <MdWork

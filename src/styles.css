@@ -123,7 +123,7 @@ a {
   .subTitle h2 {
     left: 8%;
   }
-  .About-containt {
+  .about-content {
     padding: 0rem;
 
     width: 100%;
@@ -138,7 +138,7 @@ a {
   max-width: fit-content;
   box-shadow: rgba(27, 202, 255, 0.2) 0px 2px 8px 0px;
 }
-.About-containt {
+.about-content {
   max-width: 500px;
   text-align: start;
   padding: 2rem;

@@ -41,7 +41,7 @@ export default function (props) {
           About{" "}
           <span style={{ color: dark ? "#4a4854" : "#0508be67" }}>Me</span>
         </h1>
-        <div className="About-containt">
+        <div className="about-content">
           <p>
             {details}
           </p>{" "}
@@ -89,21 +89,6 @@ export default function (props) {
           </table>
           <hr />
           <br />
-        </div>
-
-        <div
-          style={{ width: "100%", display: "flex", alignItems: "flex-start" }}
-        >
-          <b>Social media</b>
-        </div>
-        <div className="explore">
-          {/* <button>
-            <span> Dowloade Resume</span>
-            <span>
-              <MdOutlineFileDownload style={{ fontSize: "24px" }} />
-            </span>
-          </button> */}
-          <Links {...links}></Links>
         </div>
       </div>
     </div>
