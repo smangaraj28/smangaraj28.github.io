@@ -52,7 +52,7 @@ export default function Home(props) {
         // style={{ background: dark ? "#ffffff1e" : "white" }}
       >
       <div>
-        <img src={profileimg} width="30%" alt="mangaraj" />
+        <img src={profileimg} width="100%" height="100%" alt="mangaraj" />
       </div>
         <h1>
             {name.split(" ")[0]}{" "}
