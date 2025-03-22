@@ -1,77 +1,71 @@
-#WorkExperience {
+.work-experience-section {
   margin-top: 5rem;
-  padding-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f4f7ff, #ffffff);
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-.grid-item {
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  max-width: 320px;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 8px;
-  margin-bottom: 10px;
+.subTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
 }
 
 .company-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.year {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1f2937;
 }
 
 .role {
   font-size: 1.1rem;
-  font-weight: 500;
-  color: #007bff;
-  margin-bottom: 8px;
+  font-weight: 600;
+  margin: 5px 0;
+  color: #555;
 }
 
 .tech-stack {
-  background-color: #f1f3f4;
-  padding: 8px;
-  border-radius: 8px;
-  text-align: center;
   font-size: 0.9rem;
-  color: #444;
+  font-weight: 500;
+  color: #007bff;
+  background: rgba(0, 123, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 8px;
 }
 
-/* Responsive Fix */
+.vertical-timeline-element-content {
+  border-left: 5px solid #007bff !important;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1) !important;
+  padding: 20px !important;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right: 7px solid #007bff !important;
+}
+
+.vertical-timeline-element-date {
+  font-size: 1rem !important;
+  font-weight: 600;
+  color: #555 !important;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.4) !important;
+  border: 3px solid white !important;
+}
+
 @media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .subTitle {
+    font-size: 1.5rem;
   }
 }

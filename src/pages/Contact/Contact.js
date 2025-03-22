@@ -1,45 +1,76 @@
-import "./contact.css";
-import "../../styles.css";
-import { useState } from "react";
-import {
-  MdOutlineNearMe,
-  MdOutlineAssignmentInd,
-} from "react-icons/md";
+import React, { useState } from "react";
+import { MdEmail, MdMessage, MdSend } from "react-icons/md";
+import "./Contact.css";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({ email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError(""); // Clear errors when typing
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { email, message } = formData;
+
+    if (!email || !message) {
+      setError("All fields are required!");
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setError("Please enter a valid email address!");
+      return;
+    }
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
+    setFormData({ email: "", message: "" });
   };
 
   return (
-    <main id="Contact">
-      <div className="subTitle">
-        <h2>
-          <MdOutlineAssignmentInd className="avatar" /> Contact Me
-        </h2>
-      </div>
-      <div className="App">
+    <div className="contact-container">
+      <div className="contact-card">
+        <h2 className="contact-title">Contact Me</h2>
+        <p className="contact-subtitle">Have a question? Drop me a message!</p>
+
+        {error && <p className="error-msg">{error}</p>}
+        {submitted && <p className="success-msg">✅ Message sent successfully!</p>}
+
         <form onSubmit={handleSubmit}>
-          <h1>Your Feedback</h1>
-          <p>
-            You can contact me at <a href="mailto:smangaraj28@gmail.com">smangaraj28@gmail.com</a>
-          </p>
-          <label htmlFor="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="example@gmail.com" required autoComplete="email" />
+          <div className="input-group">
+            <MdEmail className="icon" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              autoComplete="true"
+              required
+            />
+          </div>
 
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" placeholder="Write your feedback here..." rows="5" required></textarea>
+          <div className="input-group">
+            <MdMessage className="icon" />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+          </div>
 
-          <button type="submit">
-            Send Message <MdOutlineNearMe />
+          <button type="submit" className="send-btn">
+            Send Message <MdSend />
           </button>
-          {submitted && <b>Message sent successfully!</b>}
         </form>
       </div>
-    </main>
+    </div>
   );
 }

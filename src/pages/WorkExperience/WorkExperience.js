@@ -1,37 +1,43 @@
-import "./WorkExperience.css";
-import { MdWorkOutline, MdOutlineLabel } from "react-icons/md";
+import React from "react";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { MdWorkOutline } from "react-icons/md";
 
 export default function WorkExperience({ workExperience = [] }) {
   return (
-    <section className="box-center-row" id="WorkExperience">
+    <section className="work-experience-section" id="WorkExperience">
       <div className="subTitle">
         <h2>
           <MdWorkOutline className="avatar" /> Work Experience
         </h2>
       </div>
 
-      {workExperience.length > 0 && (
-        <div className="grid-container">
-          {workExperience.map((job, index) => (
-            <div className="grid-item" key={index}>
-              <div className="card">
-                <div className="card-header">
-                  <h3 className="company-name">{job.company}</h3>
-                  {job.year && (
-                    <span className="year">
-                      <MdOutlineLabel className="icon" /> {job.year}
-                    </span>
-                  )}
-                </div>
-                <h4 className="role">{job.role}</h4>
-                <div className="tech-stack">
-                  <b>{job.techStack.join(", ")}</b>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
+      <VerticalTimeline>
+        {workExperience.map((job, index) => (
+          <VerticalTimelineElement
+            key={index}
+            date={job.year}
+            icon={<MdWorkOutline />}
+            iconStyle={{
+              background: index % 2 === 0 ? "#007bff" : "#28a745",
+              color: "#fff",
+            }}
+            contentStyle={{
+              background: index % 2 === 0 ? "#e8f1ff" : "#e9f9ee",
+              color: "#000",
+              borderRadius: "10px",
+              boxShadow: "0px 5px 15px rgba(0,0,0,0.1)",
+            }}
+            contentArrowStyle={{
+              borderRight: index % 2 === 0 ? "7px solid #007bff" : "7px solid #28a745",
+            }}
+          >
+            <h3 className="company-name">{job.company}</h3>
+            <h4 className="role">{job.role}</h4>
+            <p className="tech-stack">{job.techStack.join(", ")}</p>
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
     </section>
   );
 }
