@@ -1,5 +1,6 @@
 import { BsInstagram, BsLightningCharge, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { FiCodesandbox, FiFacebook, FiGithub, FiTwitter } from "react-icons/fi";
+import "./Links.css"; // Import the CSS file
 
 export default function Links({ linkedin, facebook, instagram, whatsapp, twitter, github, stackblitz, codesandbox }) {
   const links = [
@@ -14,7 +15,7 @@ export default function Links({ linkedin, facebook, instagram, whatsapp, twitter
   ];
 
   return (
-    <div className="flex gap-4 mt-4">
+    <div className="links-container">
       {links
         .filter(link => link.href) // Only show non-empty links
         .map((link, index) => (
@@ -24,8 +25,8 @@ export default function Links({ linkedin, facebook, instagram, whatsapp, twitter
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link.label}
-            className="p-2 rounded-full border hover:shadow-md transition"
-            style={{ color: link.color, fontSize: "1.5rem" }}
+            className="link-item"
+            style={{ color: link.color }} // Apply color directly here
           >
             {link.icon}
           </a>

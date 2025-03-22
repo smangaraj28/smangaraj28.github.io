@@ -31,7 +31,7 @@ export default function Home({ personalInfo = {}, contactInfo = {} }) {
 
         <div className="status-container">
           <MdWork className="status-icon" />
-          <span>{title} at {company}</span>
+          <span className="status-text">{title} at {company}</span>
         </div>
 
         {/* Resume Button */}

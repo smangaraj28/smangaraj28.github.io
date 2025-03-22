@@ -1,0 +1,50 @@
+/* Links Container */
+.links-container {
+    display: flex;
+    gap: 1.2rem; /* Adjusted gap for better spacing */
+    margin-top: 1.5rem;
+    justify-content: center; /* Center the icons horizontally */
+  }
+  
+  /* Link Item */
+  .link-item {
+    padding: 0.8rem;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 2rem; /* Adjust icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover Effect for Icons */
+  .link-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px; /* Shadow effect */
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Add direct color styling based on the link color */
+  .link-item.blue {
+    color: blue;
+  }
+  .link-item.red {
+    color: red;
+  }
+  .link-item.skyblue {
+    color: skyblue;
+  }
+  .link-item.black {
+    color: black;
+  }
+  .link-item.green {
+    color: green;
+  }
+  .link-item.blueviolet {
+    color: blueviolet;
+  }
+  .link-item.brown {
+    color: brown;
+  }
+  
