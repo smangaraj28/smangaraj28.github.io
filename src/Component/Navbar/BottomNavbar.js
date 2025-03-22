@@ -4,39 +4,35 @@ import {
   MdTurnedInNot,
   MdOutlineAssignmentInd,
   MdOutlineAssignment,
-  MdOutlineContacts
+  MdOutlineContacts,
 } from "react-icons/md";
 import { BiHome } from "react-icons/bi";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export default function App() {
-  const [Index, setIndex] = useState(0);
+const menuItems = [
+  { name: "home", icon: <BiHome /> },
+  { name: "About", icon: <MdOutlineAssignmentInd /> },
+  { name: "Skills", icon: <MdOutlineAssignment /> },
+  { name: "Projects", icon: <MdTurnedInNot /> },
+  { name: "Contact", icon: <MdOutlineContacts /> },
+];
+
+export default function Navbar() {
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <>
-      {[
-        { name: "home", icon: <BiHome /> },
-        {
-          name: "About",
-          icon: <MdOutlineAssignmentInd />
-        },
-        { name: "Skills", icon: <MdOutlineAssignment /> },
-        { name: "Projects", icon: <MdTurnedInNot /> },
-        { name: "Contact", icon: <MdOutlineContacts /> }
-      ].map((i, index) => (
-        <>
-          <a
-            style={{ color: Index === index ? "black" : "#b3b3b3" }}
-            href={`#${i.name}`}
-            onClick={() => {
-              setIndex(index);
-            }}
-          >
-            {i.icon}
-            <b>{i.name}</b>
-          </a>
-        </>
+    <nav className="navbar">
+      {menuItems.map((item, index) => (
+        <a
+          key={item.name}
+          href={`#${item.name}`}
+          className={activeIndex === index ? "active" : "inactive"}
+          onClick={() => setActiveIndex(index)}
+        >
+          {item.icon}
+          <b>{item.name}</b>
+        </a>
       ))}
-    </>
+    </nav>
   );
 }

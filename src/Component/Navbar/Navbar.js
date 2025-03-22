@@ -1,61 +1,43 @@
 import "./Navbar.css";
 import "../Home/Home.css";
 import {
-  MdKeyboardArrowUp,
   MdTurnedInNot,
   MdOutlineAssignmentInd,
   MdOutlineAssignment,
-  MdOutlineContacts
+  MdOutlineContacts,
 } from "react-icons/md";
 import { BiHome } from "react-icons/bi";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-export default function App() {
-  const [active, setactive] = useState([1, 0, 0, 0]);
-  const [show, hide] = useState(false);
-  let temp = [0, 0, 0, 0];
+export default function Navbar() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const menuItems = [
+    { name: "home", icon: <BiHome className="avatar" /> },
+    { name: "About", icon: <MdOutlineAssignmentInd className="avatar" /> },
+    { name: "Skills", icon: <MdOutlineAssignment className="avatar" /> },
+    { name: "Projects", icon: <MdTurnedInNot className="avatar" /> },
+    { name: "Contact", icon: <MdOutlineContacts className="avatar" /> },
+  ];
 
   return (
     <div className="item-container">
-      <div style={{ visibility: show ? "hidden" : "visible" }}>
-        {[
-          { name: "home", icon: <BiHome className="avatar" /> },
-          {
-            name: "About",
-            icon: <MdOutlineAssignmentInd className="avatar" />
-          },
-          { name: "Skills", icon: <MdOutlineAssignment className="avatar" /> },
-          { name: "Projects", icon: <MdTurnedInNot className="avatar" /> },
-          { name: "Contact", icon: <MdOutlineContacts className="avatar" /> }
-        ].map((i, index) =>
-          active[index] ? (
-            <div className="active" data-foo={i.name}>
-              {i.icon}
-            </div>
-          ) : (
-            <a href={`#${i.name}`}>
+      {isVisible && (
+        <div>
+          {menuItems.map((item, index) => (
+            <a key={index} href={`#${item.name}`}>
               <div
-                className="inactive"
-                data-foo={i.name}
-                onClick={() => {
-                  temp[index] = 1;
-                  setactive(temp);
-                }}
+                className={index === activeIndex ? "active" : "inactive"}
+                data-foo={item.name}
+                onClick={() => setActiveIndex(index)}
               >
-                {i.icon}
+                {item.icon}
               </div>
             </a>
-          )
-        )}
-      </div>
-      {/* <div className="boll">
-        <MdKeyboardArrowUp
-          style={{ height: "100%" }}
-          onClick={() => {
-            hide(!show);
-          }}
-        />
-      </div> */}
+          ))}
+        </div>
+      )}
     </div>
   );
 }
