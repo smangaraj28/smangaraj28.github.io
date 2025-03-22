@@ -1,4 +1,4 @@
-import "../Home/Home.css";
+import "../About/About.css";
 import { useState, useEffect } from "react";
 import aboutimg from "../../assets/036.png";
 import { MdPersonOutline, MdOutlineEvent, MdWorkOutline } from "react-icons/md";
@@ -38,13 +38,6 @@ export default function About({ personalInfo = {}, contactInfo = {} }) {
         background: dark ? "#191919" : "white",
       }}
     >
-      <button onClick={() => setDark(!dark)} className="dark-mode-toggle">
-        Toggle Dark Mode
-      </button>
-      
-      <div className="hero">
-        <img src={aboutimg} width="80%" alt="Profile" />
-      </div>
       
       <div className="header">
         <h1>
@@ -84,7 +77,7 @@ export default function About({ personalInfo = {}, contactInfo = {} }) {
           <br />
         </div>
         
-        <Links links={contactInfo} />
+        <Links {...contactInfo} />
       </div>
     </div>
   );

@@ -14,20 +14,18 @@ export default function WorkExperience({ workExperience = [] }) {
         <div className="grid-container">
           {workExperience.map((job, index) => (
             <div className="grid-item" key={index}>
-              <div className="Cards">
-                <div className="Card-header">
-                  <h2>{job.company}</h2>
+              <div className="card">
+                <div className="card-header">
+                  <h3 className="company-name">{job.company}</h3>
                   {job.year && (
-                    <h2>
+                    <span className="year">
                       <MdOutlineLabel className="icon" /> {job.year}
-                    </h2>
+                    </span>
                   )}
                 </div>
-                <h2 className="content">{job.role}</h2>
-                <div className="bottom-button-export">
-                  <div className="text">
-                    <b>{job.techStack.join(", ")}</b>
-                  </div>
+                <h4 className="role">{job.role}</h4>
+                <div className="tech-stack">
+                  <b>{job.techStack.join(", ")}</b>
                 </div>
               </div>
             </div>

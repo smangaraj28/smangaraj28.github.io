@@ -1,0 +1,131 @@
+/* About Section */
+#About {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: var(--background);
+  color: var(--text-color);
+  transition: var(--background) 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.dark {
+  --background: #191919;
+  --text-color: white;
+}
+
+.light {
+  --background: white;
+  --text-color: black;
+}
+
+/* Hero Image */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero img:hover {
+  transform: scale(1.05);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  max-width: 800px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.header span {
+  color: #0508be;
+}
+
+/* About Content */
+.about-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+/* Main Table */
+.main-table {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.main-table td {
+  padding: 10px 15px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.main-table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-table .avatar {
+  font-size: 1.5rem;
+  color: #0508be;
+}
+
+/* Links Section */
+.links-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.links-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.links-container a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #About {
+    padding: 3rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .hero img {
+    max-width: 250px;
+  }
+
+  .main-table td {
+    font-size: 0.9rem;
+  }
+}

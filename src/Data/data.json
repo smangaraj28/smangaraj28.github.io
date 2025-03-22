@@ -67,7 +67,6 @@
         "type": "Mega Project",
         "description": "Developed using Angular8 & Python Flask with PostgreSQL, Travis CI, and Docker. Designed for hotel management solutions from small to large scale. Implemented 3-way data binding using Angular & Firebase and OAuth2 authentication.",
         "techStack": ["React Native", "Angular", "Python", "Flask", "PostgreSQL"],
-        "year": "Final Year Project",
         "link": "https://docs.google.com/document/d/1ceKJlsidtzayzkLIDJIm-9Jag0rtBMr205f-gP-1cO8/edit?usp=sharing"
       },
       {
@@ -81,42 +80,42 @@
     "technicalSkills": [
       {
         "name": "Python",
-        "proficiency": "80%",
+        "proficiency": "80",
         "description": "Strong understanding of functions, loops, arrays, and object-oriented programming."
       },
       {
         "name": "JavaScript",
-        "proficiency": "70%",
+        "proficiency": "70",
         "description": "Advanced level JavaScript."
       },
       {
         "name": "Java",
-        "proficiency": "90%",
+        "proficiency": "90",
         "description": "Deep understanding of functions, loops, arrays, and object-oriented programming."
       },
       {
         "name": "React",
-        "proficiency": "80%",
+        "proficiency": "80",
         "description": "Experience with React components, hooks, and state management."
       },
       {
         "name": "Spring Boot",
-        "proficiency": "80%",
+        "proficiency": "80",
         "description": "Building scalable Java-based microservices."
       },
       {
         "name": "Hadoop",
-        "proficiency": "60%",
+        "proficiency": "60",
         "description": "Understanding of distributed computing and big data processing."
       },
       {
         "name": "HBase",
-        "proficiency": "60%",
+        "proficiency": "60",
         "description": "Experience with NoSQL database for real-time big data applications."
       },
       {
         "name": "MapReduce",
-        "proficiency": "60%",
+        "proficiency": "60",
         "description": "Familiarity with writing MapReduce jobs for large-scale data processing."
       }
     ]

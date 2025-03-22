@@ -1,68 +1,64 @@
+/* Container for Projects */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Projects Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Auto-adjusting tiles */
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  padding: 1rem;
+}
+
+/* Project Card */
 .grid-item {
   background: white;
   padding: 20px;
-  border-radius: 1rem;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  transition: transform 0.3s ease;
-  overflow: hidden;
-  word-wrap: break-word;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distributes content evenly */
-  min-height: 250px; /* Ensures content does not get pushed too low */
-}
-
-.content {
-  color: #555;
-  font-size: 1rem;
-  margin: 10px 0;
-  white-space: normal;
-  overflow-wrap: break-word;
-  flex-grow: 1; /* Pushes content upwards if possible */
-}
-
-.Card-header h2 {
-  font-size: 1rem;
-  max-width: 90%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.bottom-button-export {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: auto; /* Ensures it's always at the bottom but with space */
-  padding-top: 10px; /* Adds space above buttons */
+  min-height: 300px;
+  max-width: 100%;
 }
 
-.text {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
+/* Updated Explore Button */
 .explorebtn {
-  border-radius: 1rem;
-  border: 2px solid transparent;
-  color: black;
-  background-color: white;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b00; /* Vibrant orange */
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 5px 10px; /* Added slight padding */
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .explorebtn:hover {
-  border: 2px solid #ddd;
-  background-color: #ddd;
-  color: black;
+  color: #cc5600; /* Slightly darker orange */
+  transform: scale(1.05); /* Small hover effect */
 }
 
-@media only screen and (max-width: 768px) {
-  .grid-item {
-    width: 100%;
-    min-height: 280px; /* Gives extra height for text visibility */
+/* Adjust spacing for better alignment */
+.bottom-button-export {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem; /* Added spacing */
+  padding-right: 8px; /* Small right padding */
+}
+
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }

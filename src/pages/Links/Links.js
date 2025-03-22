@@ -1,51 +1,35 @@
 import { BsInstagram, BsLightningCharge, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { FiCodesandbox, FiFacebook, FiGithub, FiTwitter } from "react-icons/fi";
 
-export default function Links({linkedin, facebook, instagram, whatsapp,
-     twitter, github, stackblitz, sandbox}) {
+export default function Links({ linkedin, facebook, instagram, whatsapp, twitter, github, stackblitz, codesandbox }) {
+  const links = [
+    { href: linkedin, icon: <BsLinkedin />, color: "blue", label: "LinkedIn" },
+    { href: instagram, icon: <BsInstagram />, color: "red", label: "Instagram" },
+    { href: facebook, icon: <FiFacebook />, color: "blue", label: "Facebook" },
+    { href: twitter, icon: <FiTwitter />, color: "skyblue", label: "Twitter" },
+    { href: github, icon: <FiGithub />, color: "black", label: "GitHub" },
+    { href: whatsapp, icon: <BsWhatsapp />, color: "green", label: "WhatsApp" },
+    { href: codesandbox, icon: <FiCodesandbox />, color: "blueviolet", label: "CodeSandbox" },
+    { href: stackblitz, icon: <BsLightningCharge />, color: "brown", label: "StackBlitz" }
+  ];
 
   return (
-      <>
-         <button className="avatar">
-            <a href={linkedin} target="_blank">
-              <BsLinkedin style={{ fontSize: "1.5rem", color: "blue" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href={instagram} target="_blank">
-              <BsInstagram style={{ fontSize: "1.5rem", color: "red" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href={facebook} target="_blank">
-              <FiFacebook style={{ fontSize: "1.5rem", color: "blue" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href={twitter} target="_blank">
-              <FiTwitter style={{ fontSize: "1.5rem", color: "skyblue" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href={github} target="_blank">
-              <FiGithub style={{ fontSize: "1.5rem", color: "black" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href={whatsapp} target="_blank">
-              <BsWhatsapp style={{ fontSize: "1.5rem", color: "green" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href={sandbox} target="_blank">
-              <FiCodesandbox style={{ fontSize: "1.5rem", color: "blueviolet" }} />
-            </a>
-          </button>
-          <button className="avatar">
-            <a href={stackblitz} target="_blank">
-              <BsLightningCharge style={{ fontSize: "1.5rem", color: "brown" }} />
-            </a>
-          </button>
-      </>
+    <div className="flex gap-4 mt-4">
+      {links
+        .filter(link => link.href) // Only show non-empty links
+        .map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={link.label}
+            className="p-2 rounded-full border hover:shadow-md transition"
+            style={{ color: link.color, fontSize: "1.5rem" }}
+          >
+            {link.icon}
+          </a>
+        ))}
+    </div>
   );
 }
