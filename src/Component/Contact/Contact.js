@@ -28,10 +28,10 @@ export default function Contact() {
           <p>
             You can contact me at <a href="mailto:smangaraj28@gmail.com">smangaraj28@gmail.com</a>
           </p>
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="example@gmail.com" required autocomplete="email" />
+          <label htmlFor="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required autoComplete="email" />
 
-          <label for="message">Message</label>
+          <label htmlFor="message">Message</label>
           <textarea id="message" name="message" placeholder="Write your feedback here..." rows="5" required></textarea>
 
           <button type="submit">
