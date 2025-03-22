@@ -1,13 +1,13 @@
 import "./styles.css";
-import Home from "./Component/Home/Home";
-import About from "./Component/About/About";
-import Skills from "./Component/Skills/Skills";
-import WorkExperience from "./Component/WorkExperience/WorkExperience";
-import Navbar from "./Component/Navbar/Navbar";
-import Project from "./Component/Projects/Project";
-import Contact from "./Component/Contact/Contact";
-import BottomNavbar from "./Component/Navbar/BottomNavbar";
-import Footer from "./Component/Footer";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Skills from "./pages/Skills/Skills";
+import WorkExperience from "./pages/WorkExperience/WorkExperience";
+import Navbar from "./components/layout/Navbar/Navbar";
+import Project from "./pages/Projects/Project";
+import Contact from "./pages/Contact/Contact";
+import BottomNavbar from "./components/layout/Navbar/BottomNavbar";
+import Footer from "./components/Footer";
 import { useContext } from "react";
 import Context from "./Data/data";
 
