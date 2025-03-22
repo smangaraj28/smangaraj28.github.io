@@ -1,34 +1,29 @@
+import React, { useContext } from "react";
 import "./styles.css";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import WorkExperience from "./pages/WorkExperience/WorkExperience";
-import Navbar from "./components/layout/Navbar/Navbar";
 import Project from "./pages/Projects/Project";
 import Contact from "./pages/Contact/Contact";
-import BottomNavbar from "./components/layout/Navbar/BottomNavbar";
-import Footer from "./components/Footer";
-import { useContext } from "react";
+import Navbar from "./components/layout/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import Context from "./Data/data";
 
 export default function App() {
-  const user = useContext(Context);
+  const { personalInfo, contactInfo, technicalSkills, workExperience, projects } = useContext(Context);
+
   return (
     <>
-      {/* <Model /> */}
-      {/* <Topnav /> */}
-      <Home personalInfo={user.personalInfo} contactInfo={user.contactInfo}/>
-      <About personalInfo={user.personalInfo} contactInfo={user.contactInfo}/>
-      <Skills skills={user.technicalSkills}/>
-      <WorkExperience workExperience={user.workExperience}/>
-      <Project projects={user.projects}/>
-      <Contact {...user.personalInfo}/>
-      <div className="navC">
-      <Navbar />
-      </div>
+      <Home personalInfo={personalInfo} contactInfo={contactInfo} />
+      <About personalInfo={personalInfo} contactInfo={contactInfo} />
+      <Skills skills={technicalSkills} />
+      <WorkExperience workExperience={workExperience} />
+      <Project projects={projects} />
+      <Contact {...personalInfo} />
       <Footer />
       <div className="navbar">
-        <BottomNavbar />
+        <Navbar />
       </div>
     </>
   );

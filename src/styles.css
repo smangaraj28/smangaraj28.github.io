@@ -1,32 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Lilita+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Coiny&family=Lilita+One&display=swap");
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Coiny&family=Lilita+One&family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dongle&family=Neonderthaw&display=swap");
+
 * {
   box-sizing: border-box;
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   scroll-behavior: smooth;
+  font-family: "Varela Round", sans-serif;
 }
 
+/* Utility Classes */
 .box-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .box-center-row {
   display: flex;
   min-width: 100%;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   margin-top: 2rem;
 }
 
 b {
   margin-left: 1rem;
-  font-family: Varela Round;
+  font-weight: 600;
 }
+
+/* Typography */
 .title-text {
   font-weight: bold;
   color: rgb(26, 25, 25);
@@ -34,23 +39,23 @@ b {
   font-size: 3.5rem;
 }
 
-.text-md,
-.text-sm {
-  font-family: Varela Round;
+.text-md {
   font-size: 1rem;
   font-weight: 500;
   color: rgb(39, 38, 38);
 }
+
 .text-sm {
   font-size: 0.7rem;
 }
+
 .subTitle-text {
   font-weight: 500;
   color: rgb(199, 198, 198);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
 }
+
+/* Avatar */
 .avatar {
   width: 45px;
   height: 45px;
@@ -60,44 +65,50 @@ b {
   border-radius: 1rem;
   color: hsl(219, 93%, 57%);
 }
+
+/* Current Status Box */
 .current-status {
   background-color: rgba(85, 83, 87, 0.103);
   border: none;
   padding: 1.5rem;
   text-align: start;
-  text-overflow: wrap;
   max-width: 500px;
 }
-h2 {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+/* Headings */
+h2, h3 {
   font-size: 1.3rem;
+  font-weight: bold;
 }
-.iconStyle {
-  font-size: 24px;
-  margin: 0px 4px 0px 1px;
-}
+
 h3 {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
-  font-family: Varela Round;
+}
+
+/* Icon Styles */
+.iconStyle {
+  font-size: 24px;
+  margin: 0 4px;
 }
 
 .iconStyle::after {
   content: attr(label);
 }
+
 .icon {
   font-size: 1.3rem;
   color: aqua;
 }
+
+/* Subtitle */
 .subTitle {
   width: 100%;
   height: 3rem;
   position: relative;
   margin-bottom: 3rem;
 }
+
 .subTitle h2 {
   display: flex;
   align-items: center;
@@ -106,55 +117,56 @@ h3 {
   left: 16%;
   font-size: 1.3rem;
   border-radius: 2rem;
-  padding: 0.3rem;
-  border: none;
-  outline: none;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 0.5rem 2rem 0.5rem 0.6rem;
+  padding: 0.5rem 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
   color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+/* Links */
 a {
   text-decoration: none;
+  color: inherit;
 }
+
+/* Responsive */
 @media only screen and (max-width: 1400px) {
   .subTitle h2 {
     left: 8%;
   }
   .about-content {
-    padding: 0rem;
-
+    padding: 0;
     width: 100%;
   }
 }
 
+/* Tag */
 .tag {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(34, 203, 255, 0.212);
   max-width: fit-content;
-  box-shadow: rgba(27, 202, 255, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(27, 202, 255, 0.2) 0px 2px 8px;
 }
+
+/* About Content */
 .about-content {
   max-width: 500px;
-  text-align: start;
   padding: 2rem;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   margin-top: 1rem;
-  font-family: Varela Round;
   border-radius: 1rem;
   font-weight: 580;
   color: rgb(139, 136, 136);
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
 }
 
+/* Small Elements */
 .sm {
   font-size: 20px;
 }
 
+/* Switch */
 .switch {
   border-radius: 50%;
   width: 50px;
@@ -164,61 +176,52 @@ a {
   border: 2px solid rgb(236, 234, 234);
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  overflow: hidden;
   position: fixed;
-  bottom: -10;
+  bottom: 0;
   width: 100%;
 }
 
-/* Style the links inside the navigation bar */
+/* Navbar Links */
 .navbar a {
   display: flex;
   align-items: center;
   flex-direction: column;
   color: #888686;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  background-color: white;
-  padding: 0.4rem 1rem;
   font-size: 1.4rem;
+  padding: 0.4rem 1rem;
   min-height: 50px;
 }
-
-/* Add a color to the active/current link */
 
 .navbar a:focus {
   background-color: #79ffce85;
   color: rgb(15, 15, 15);
 }
-.navbar b {
-  font-size: 0.7rem;
-  width: 100%;
-  margin-left: 0%;
-  margin-top: 0.4rem;
-}
 
+/* Footer */
 .footer {
   background-color: #ddd;
   width: 100%;
   height: 300px;
   display: grid;
   place-content: center;
-  font-family: Varela Round;
+  text-align: center;
 }
 
 .footer h1 {
   font-weight: 900;
 }
+
 .footer p {
   font-weight: 200;
   margin-top: 0.4rem;
 }
+
 .footer .avatar {
   display: grid;
   place-content: center;

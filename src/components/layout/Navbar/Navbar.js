@@ -1,5 +1,4 @@
 import "./Navbar.css";
-import "../../../pages/Home/Home.css";
 import {
   MdTurnedInNot,
   MdOutlineAssignmentInd,
@@ -9,35 +8,31 @@ import {
 import { BiHome } from "react-icons/bi";
 import { useState } from "react";
 
+const menuItems = [
+  { name: "home", icon: <BiHome /> },
+  { name: "About", icon: <MdOutlineAssignmentInd /> },
+  { name: "WorkExperience", icon: <MdOutlineAssignment /> },
+  { name: "Skills", icon: <MdOutlineAssignment /> },
+  { name: "Projects", icon: <MdTurnedInNot /> },
+  { name: "Contact", icon: <MdOutlineContacts /> },
+];
+
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const menuItems = [
-    { name: "home", icon: <BiHome className="avatar" /> },
-    { name: "About", icon: <MdOutlineAssignmentInd className="avatar" /> },
-    { name: "Skills", icon: <MdOutlineAssignment className="avatar" /> },
-    { name: "Projects", icon: <MdTurnedInNot className="avatar" /> },
-    { name: "Contact", icon: <MdOutlineContacts className="avatar" /> },
-  ];
 
   return (
-    <div className="item-container">
-      {isVisible && (
-        <div>
-          {menuItems.map((item, index) => (
-            <a key={index} href={`#${item.name}`}>
-              <div
-                className={index === activeIndex ? "active" : "inactive"}
-                data-foo={item.name}
-                onClick={() => setActiveIndex(index)}
-              >
-                {item.icon}
-              </div>
-            </a>
-          ))}
-        </div>
-      )}
-    </div>
+    <nav className="navbar">
+      {menuItems.map((item, index) => (
+        <a
+          key={item.name}
+          href={`#${item.name}`}
+          className={activeIndex === index ? "active" : "inactive"}
+          onClick={() => setActiveIndex(index)}
+        >
+          {item.icon}
+          <b>{item.name}</b>
+        </a>
+      ))}
+    </nav>
   );
 }

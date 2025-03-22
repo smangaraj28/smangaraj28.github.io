@@ -1,7 +1,6 @@
 import React from "react";
 import { BsWhatsapp, BsInstagram } from "react-icons/bs";
 import { FiFacebook, FiLinkedin } from "react-icons/fi";
-import "../styles.css";
 
 const socialLinks = [
   { icon: <BsWhatsapp />, url: "https://wa.me/9658793973", label: "WhatsApp" },
