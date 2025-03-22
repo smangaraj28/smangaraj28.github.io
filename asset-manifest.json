@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/smangaraj-personal/static/css/main.f68a986c.css",
+    "main.css": "/smangaraj-personal/static/css/main.d4491b04.css",
     "main.js": "/smangaraj-personal/static/js/main.59127007.js",
     "static/media/profile.jpeg": "/smangaraj-personal/static/media/profile.ec3df067854772544b8a.jpeg",
     "static/media/034.png": "/smangaraj-personal/static/media/034.7bdbc1a0d7e7b072ca3e.png",
     "index.html": "/smangaraj-personal/index.html",
-    "main.f68a986c.css.map": "/smangaraj-personal/static/css/main.f68a986c.css.map",
+    "main.d4491b04.css.map": "/smangaraj-personal/static/css/main.d4491b04.css.map",
     "main.59127007.js.map": "/smangaraj-personal/static/js/main.59127007.js.map"
   },
   "entrypoints": [
-    "static/css/main.f68a986c.css",
+    "static/css/main.d4491b04.css",
     "static/js/main.59127007.js"
   ]
 }
