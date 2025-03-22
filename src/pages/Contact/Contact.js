@@ -57,6 +57,7 @@ export default function Contact() {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
+              autoComplete="true"
               required
             />
           </div>
