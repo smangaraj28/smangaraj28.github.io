@@ -1,23 +1,3 @@
-/* Global Styles */
-:root {
-  --primary-color: #0508be;
-  --secondary-color: #6b6b6b;
-  --text-light: white;
-  --text-dark: black;
-  --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  --transition: all 0.3s ease-in-out;
-}
-
-/* Light & Dark Mode */
-.dark-mode {
-  background: #191919 !important;
-  color: var(--text-light) !important;
-}
-.light-mode {
-  background: white !important;
-  color: var(--text-dark) !important;
-}
-
 /* Home Section */
 .Home {
   min-height: 100vh;
@@ -25,24 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: 4rem 2rem;
-  transition: var(--transition);
-}
-
-/* Dark Mode Toggle */
-.dark-mode-toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  background: var(--secondary-color);
-  color: var(--text-light);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-.dark-mode-toggle:hover {
-  background: #444;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Header Section */
@@ -55,7 +18,7 @@
 .header img {
   max-width: 150px;
   border-radius: 50%;
-  box-shadow: var(--shadow);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: transform 0.3s ease-in-out;
 }
 .header img:hover {
@@ -86,11 +49,11 @@
 .status-container {
   display: flex;
   align-items: center;
-  justify-content: center;  /* Center the status text */
+  justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
   font-size: 1.2rem;
-  font-weight: bold;  /* Make the text bold */
+  font-weight: bold;
   color: var(--text-dark);
 }
 .status-icon {
@@ -103,9 +66,10 @@
   justify-content: center;
   margin-top: 1rem;
 }
+/* Buttons */
 .buttons-group button {
-  background: var(--primary-color);
-  color: white;  /* Default button text color */
+  background: rgb(3, 146, 203); /* Blue background */
+  color: white;  /* Text color */
   border: none;
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -115,14 +79,18 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: var(--transition);
-  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+/* Button Hover Effect */
 .buttons-group button:hover {
-  background: #02058d;
+  background: #02058d;  /* Darker shade of blue on hover */
 }
+
+/* Resume Button Link */
 .buttons-group a {
-  color: white;
+  color: white;  /* Make sure the link text is white */
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -140,6 +108,7 @@
   color: white;  /* Make sure the text in the span is white */
 }
 
+
 /* Hero Image */
 .hero {
   display: flex;
@@ -150,7 +119,7 @@
 .hero img {
   max-width: 80%;
   border-radius: 10px;
-  transition: var(--transition);
+  transition: all 0.3s ease-in-out;
 }
 .hero img:hover {
   transform: scale(1.03);

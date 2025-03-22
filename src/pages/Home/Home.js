@@ -1,22 +1,14 @@
 import "./Home.css";
-import { useState } from "react";
 import { MdOutlineFileDownload, MdWork } from "react-icons/md";
 import Links from "../Links/Links";
 import hero from "../../assets/034.png";
 import profileimg from "../../assets/profile.jpeg";
 
 export default function Home({ personalInfo = {}, contactInfo = {} }) {
-  const [darkMode, setDarkMode] = useState(false);
   const { fullName = "", professionalSummary = "", title = "", company = "", resumeUrl = "" } = personalInfo;
 
   return (
-    <section className={`Home ${darkMode ? "dark-mode" : "light-mode"}`} id="home">
-      
-      {/* Dark Mode Toggle */}
-      <button onClick={() => setDarkMode(!darkMode)} className="dark-mode-toggle">
-        {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
-      </button>
-
+    <section className="Home" id="home">
       {/* Profile & Header */}
       <div className="header">
         <img src={profileimg} alt="Profile" />
@@ -24,7 +16,7 @@ export default function Home({ personalInfo = {}, contactInfo = {} }) {
         <h1>
           {fullName.split(" ")[0]} <span>{fullName.split(" ")[1]}</span> {fullName.split(" ")[2]}
         </h1>
-        
+
         <p>{professionalSummary}</p>
 
         <Links {...contactInfo} />

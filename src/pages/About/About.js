@@ -1,13 +1,11 @@
 import "../About/About.css";
 import { useState, useEffect } from "react";
-import aboutimg from "../../assets/036.png";
 import { MdPersonOutline, MdOutlineEvent, MdWorkOutline } from "react-icons/md";
 import { BiMailSend } from "react-icons/bi";
-import { BsLightningCharge, BsBuilding } from "react-icons/bs";
+import { BsLightningCharge } from "react-icons/bs";
 import Links from "../../pages/Links/Links";
 
 export default function About({ personalInfo = {}, contactInfo = {} }) {
-  const [dark, setDark] = useState(false);
   const { fullName = "", email = "", dob = "", title = "", company = "", professionalSummary = "" } = personalInfo;
   const [age, setAge] = useState(null);
 
@@ -29,19 +27,11 @@ export default function About({ personalInfo = {}, contactInfo = {} }) {
   }, [dob]);
 
   return (
-    <div
-      className="Home"
-      id="About"
-      style={{
-        minHeight: "100vh",
-        color: dark ? "white" : "black",
-        background: dark ? "#191919" : "white",
-      }}
-    >
+    <div className="Home" id="About">
       
       <div className="header">
         <h1>
-          About <span style={{ color: dark ? "#4a4854" : "#0508be67" }}>Me</span>
+          About Me
         </h1>
         
         <div className="about-content">

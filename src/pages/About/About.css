@@ -9,18 +9,6 @@
   color: var(--text-color);
   transition: var(--background) 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-
-/* Dark Mode */
-.dark {
-  --background: #191919;
-  --text-color: white;
-}
-
-.light {
-  --background: white;
-  --text-color: black;
-}
-
 /* Hero Image */
 .hero {
   display: flex;

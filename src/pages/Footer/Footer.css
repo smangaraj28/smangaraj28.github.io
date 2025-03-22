@@ -1,0 +1,56 @@
+/* 🌟 Modern Footer Styling */
+.footer {
+  background: #151515;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px; /* Reduced padding to reduce height */
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.footer h1 {
+  font-size: 2rem; /* Smaller title to reduce height */
+  font-weight: bold;
+  margin-bottom: 10px; /* Reduced margin between title and paragraph */
+  color: #00ffc8;
+}
+
+.footer p {
+  font-size: 1rem; /* Slightly smaller paragraph text */
+  opacity: 0.8;
+  margin-bottom: 15px; /* Reduced margin at the bottom */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Reduced space between social icons */
+}
+
+.social-icon {
+  font-size: 2.4rem; /* Slightly smaller icons */
+  color: #ffffff;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px); /* Slightly less hover effect */
+  color: #00ffc8;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .footer h1 {
+    font-size: 1.8rem; /* Smaller title on small screens */
+  }
+  .footer p {
+    font-size: 0.9rem; /* Smaller text on small screens */
+  }
+  .social-icon {
+    font-size: 2.2rem; /* Smaller icons on small screens */
+  }
+}
