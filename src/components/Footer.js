@@ -1,42 +1,39 @@
 import React from "react";
+import { BsWhatsapp, BsInstagram } from "react-icons/bs";
+import { FiFacebook, FiLinkedin } from "react-icons/fi";
 import "../styles.css";
-import * as BS from "react-icons/bs";
-import * as FI from "react-icons/fi";
+
+const socialLinks = [
+  { icon: <BsWhatsapp />, url: "https://wa.me/9658793973", label: "WhatsApp" },
+  { icon: <BsInstagram />, url: "https://www.instagram.com/soumyasambitmangaraj/", label: "Instagram" },
+  { icon: <FiFacebook />, url: "https://www.facebook.com/soumyasambit.mangaraj/", label: "Facebook" },
+  { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/soumya-sambit-mangaraj/", label: "LinkedIn" }
+];
+
 const Footer = () => {
   return (
-    <div className="footer">
-      <h1>Bapu</h1>
+    <footer className="footer">
+      <div className="footer-content">
+        <h1>Bapu</h1>
+        <p>© {new Date().getFullYear()} Bapu. All rights reserved.</p>
 
-      <p>Copyright © 2022 Bapu. All rights reserved.</p>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-start",
-          flexFlow: "row wrap"
-        }}
-      >
-        <button className="avatar">
-          <a href="https://wa.me/9658793973">
-            <BS.BsWhatsapp style={{ fontSize: "1.5rem", color: "black" }} />
-          </a>
-        </button>
-        <button className="avatar">
-          <a href="https://www.instagram.com/soumyasambitmangaraj/">
-            <BS.BsInstagram style={{ fontSize: "1.5rem", color: "black" }} />
-          </a>
-        </button>
-        <button className="avatar">
-          <a href="https://www.facebook.com/soumyasambit.mangaraj/">
-            <FI.FiFacebook style={{ fontSize: "1.5rem", color: "black" }} />
-          </a>
-        </button>
-        <button className="avatar">
-          <a href="https://www.linkedin.com/in/soumya-sambit-mangaraj/">
-            <FI.FiLinkedin style={{ fontSize: "1.5rem", color: "black" }} />
-          </a>
-        </button>
+        <div className="social-links">
+          {socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-icon"
+              aria-label={link.label}
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
+
 export default Footer;
