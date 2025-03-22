@@ -1,124 +1,124 @@
 {
-    "personal": {
-        "name": "Soumya Sambit Mangaraj",
-        "email": "smangaraj28@gmail.com",
-        "dob": "28-02-1996",
-        "title": "Software Engineer",
+    "personalInfo": {
+      "fullName": "Soumya Sambit Mangaraj",
+      "email": "smangaraj28@gmail.com",
+      "dob": "1996-02-28",
+      "title": "Senior Software Engineer",
+      "company": "Goldman Sachs",
+      "resumeUrl": "https://drive.google.com/file/d/1OhEx2sSWkRf03yorIz6WS-BRKGURwRKj/view?usp=sharing",
+      "address": {
+        "street": "Mangaraj Bhavan, Near Park Land Hospital",
+        "city": "Khordha",
+        "state": "Odisha",
+        "country": "India",
+        "postalCode": "752055"
+      },
+      "bio": "Engineer by Profession 🧑🏽‍💻 & Teacher by Passion ❤️",
+      "professionalSummary": "I'm currently working as a senior software engineer at Goldman Sachs. Strong believer in work, not designation. Passionate about mentoring and helping individuals grow in the field of computer science."
+    },
+    "contactInfo": {
+      "linkedin": "https://www.linkedin.com/in/soumya-sambit-mangaraj/",
+      "github": "https://github.com/smangaraj28",
+      "twitter": "",
+      "instagram": "https://www.instagram.com/soumyasambitmangaraj/",
+      "facebook": "https://www.facebook.com/soumyasambit.mangaraj/",
+      "whatsapp": "",
+      "stackblitz": "https://stackblitz.com/@smangaraj28",
+      "codesandbox": "https://codesandbox.io/u/smangaraj28"
+    },
+    "workExperience": [
+      {
+        "company": "ADP",
+        "role": "Full Stack Developer",
+        "startDate": "2018-08",
+        "endDate": "2020-12",
+        "techStack": ["Java", "Spring Boot", "AWS", "AngularJS"]
+      },
+      {
+        "company": "Delhivery",
+        "role": "Full Stack Developer",
+        "startDate": "2021-01",
+        "endDate": "2021-10",
+        "techStack": ["Python", "Django", "AWS", "Java", "Spring Boot", "Node.js"]
+      },
+      {
+        "company": "PayPal",
+        "role": "Senior Software Development Engineer",
+        "startDate": "2021-10",
+        "endDate": "2023-05",
+        "techStack": ["Java", "Spring Boot", "Node.js", "React", "GCP"]
+      },
+      {
         "company": "Goldman Sachs",
-        "resumeLink": "https://drive.google.com/file/d/1OhEx2sSWkRf03yorIz6WS-BRKGURwRKj/view?usp=sharing",
-        "address": "Mangaraj Bhavan, Near Park Land Hospital, Khordha, Odisha, India, 752055",
-        "mapLink": "",
-        "keywords": ["Engineer by Profession 🧑🏽‍💻 & Teacher by Passion ❤️"],
-        "currentStatus": "Senior Software Engineer at Goldman Sachs",
-        "details": "I'm currently working as a senior software engineer at Goldman Sachs. Strong Believer of Work , Not interested in Designation. Helping individuals to excel their career in computer science world by circulating my knowledge and life experiences.I’m always proactive about seeking new opportunities to develop and grow in my role"    
-    },
-    "employement": [
-        {
-            "company": "ADP",
-            "designation": "Full Stack Developer",
-            "startPeriod": "Aug-2018",
-            "endingPeriod": "Dec-2020",
-            "description": "",
-            "awards": "",
-            "techstack": "Java, Springboot, AWS, Angular JS"
-        },
-        {
-            "company": "Delhivery",
-            "designation": "Full Stack Developer",
-            "startPeriod": "Jan-2021",
-            "endingPeriod": "Oct-2021",
-            "description": "",
-            "awards": "",
-            "techstack": "Python, Django, AWS, Java, Springboot, Node Js"
-        },
-        {
-            "company": "PayPal",
-            "designation": "Senior Software Developement Engineer",
-            "startPeriod": "Oct-2021",
-            "endingPeriod": "May-2023",
-            "description": "",
-            "awards": "",
-            "techstack": "Java, Springboot, Node Js, React, GCP"
-        },
-        {
-            "company": "Goldman Sachs",
-            "designation": "Senior Software Developement Engineer",
-            "startPeriod": "May-2023",
-            "endingPeriod": "",
-            "description": "",
-            "awards": "",
-            "techstack": "Java, Springboot, Big Data, Hadoop, MapReduce, HBase, HDFS"
-        }
+        "role": "Associate Software Engineer",
+        "startDate": "2023-05",
+        "techStack": ["Java", "Spring Boot", "Big Data", "Hadoop", "MapReduce", "HBase", "HDFS"]
+      },
+      {
+        "company": "Oracle Cloud (OCI) ",
+        "role": "Senior Software Development Engineer",
+        "startDate": "2024-07",
+        "techStack": ["Java", "Spring Boot", "OCI"]
+      }
     ],
-    "links": {
-        "linkedin": "https://www.linkedin.com/in/soumya-sambit-mangaraj/",
-        "facebook": "https://www.facebook.com/soumyasambit.mangaraj/",
-        "instagram": "https://www.instagram.com/soumyasambitmangaraj/",
-        "whatsapp": "",
-        "twitter": "",
-        "github": "https://github.com/smangaraj28",
-        "stackblitz": "https://stackblitz.com/@smangaraj28",
-        "sandbox": "https://codesandbox.io/u/smangaraj28"
-    },
-    "projects": {
-        "mega": [
-            {
-                "title": "Universal Hotel Solution",
-                "description": "Developed this project using Angular8 & Python Flask Framework with PostgreSQL having Travis CI Pipeline with Docker containerization for providing management solutions from small to large scale hotels. Implemented 3 way databinding using Angular & Firebase. Architected Authentication for web Application using OAuth2 and JSON web tokens (JWT).Wrote Testing Suite to validate each UI level operation.",
-                "skills": "Lang - React native",
-                "link": "https://docs.google.com/document/d/1ceKJlsidtzayzkLIDJIm-9Jag0rtBMr205f-gP-1cO8/edit?usp=sharing",
-                "year": "final year Project"
-            }
-        ],
-        "mini": [
-            {
-                "title": "Personal Portfolio",
-                "description": "Personal information about myself , just like different projects information about resuming and more..",
-                "skills": "React js",
-                "link": "https://gksjfg.csb.app/"
-            }
-        ]
-    },
-    "skills": [
-        {
-            "title": "Python",
-            "efficiency": "80%",
-            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
-        },
-        {
-            "title": "Javascript",
-            "efficiency": "70%",
-            "description": "Advance level Javascript"
-        },
-        {
-            "title": "Java",
-            "efficiency": "90%",
-            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
-        },
-        {
-            "title": "React",
-            "efficiency": "80%",
-            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
-        },
-        {
-            "title": "Springboot",
-            "efficiency": "80%",
-            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
-        },
-        {
-            "title": "Hadooop",
-            "efficiency": "60%",
-            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
-        },
-        {
-            "title": "Hbase",
-            "efficiency": "60%",
-            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
-        },
-        {
-            "title": "MapReduce",
-            "efficiency": "60%",
-            "description": "Basic understanding about functions ,loops , arrays and object oriented programming concepts "
-        }
+    "projects": [
+      {
+        "title": "Universal Hotel Solution",
+        "type": "Mega Project",
+        "description": "Developed using Angular8 & Python Flask with PostgreSQL, Travis CI, and Docker. Designed for hotel management solutions from small to large scale. Implemented 3-way data binding using Angular & Firebase and OAuth2 authentication.",
+        "techStack": ["React Native", "Angular", "Python", "Flask", "PostgreSQL"],
+        "year": "Final Year Project",
+        "link": "https://docs.google.com/document/d/1ceKJlsidtzayzkLIDJIm-9Jag0rtBMr205f-gP-1cO8/edit?usp=sharing"
+      },
+      {
+        "title": "Personal Portfolio",
+        "type": "Mini Project",
+        "description": "Personal portfolio showcasing projects, resume, and more.",
+        "techStack": ["React.js"],
+        "link": "https://gksjfg.csb.app/"
+      }
+    ],
+    "technicalSkills": [
+      {
+        "name": "Python",
+        "proficiency": "80%",
+        "description": "Strong understanding of functions, loops, arrays, and object-oriented programming."
+      },
+      {
+        "name": "JavaScript",
+        "proficiency": "70%",
+        "description": "Advanced level JavaScript."
+      },
+      {
+        "name": "Java",
+        "proficiency": "90%",
+        "description": "Deep understanding of functions, loops, arrays, and object-oriented programming."
+      },
+      {
+        "name": "React",
+        "proficiency": "80%",
+        "description": "Experience with React components, hooks, and state management."
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency": "80%",
+        "description": "Building scalable Java-based microservices."
+      },
+      {
+        "name": "Hadoop",
+        "proficiency": "60%",
+        "description": "Understanding of distributed computing and big data processing."
+      },
+      {
+        "name": "HBase",
+        "proficiency": "60%",
+        "description": "Experience with NoSQL database for real-time big data applications."
+      },
+      {
+        "name": "MapReduce",
+        "proficiency": "60%",
+        "description": "Familiarity with writing MapReduce jobs for large-scale data processing."
+      }
     ]
 }
+  

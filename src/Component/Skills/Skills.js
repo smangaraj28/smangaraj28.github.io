@@ -1,6 +1,10 @@
 import "../Home/Home.css";
 import "../../styles.css";
+import React from "react";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import { MdOutlineAssignmentInd } from "react-icons/md";
+import "./Skills.css";
 
 export default function Skills({ skills = [] }) {
   return (
@@ -15,13 +19,21 @@ export default function Skills({ skills = [] }) {
           {skills.map((skill, index) => (
             <div className="grid-item" key={index}>
               <div className="Cards">
-                <div className="Card-header">
-                  <h2>{skill.title}</h2>
-                  <div className="card-avatar">
-                    <h2>{skill.efficiency}</h2>
-                  </div>
+                <h3>{skill.name}</h3>
+                <div className="progress-container">
+                  <CircularProgressbar
+                    value={skill.proficiency}
+                    text={`${skill.proficiency}%`}
+                    styles={buildStyles({
+                      textSize: "16px",
+                      pathColor: "#4CAF50",
+                      textColor: "#000",
+                      trailColor: "#ddd",
+                      backgroundColor: "#f8f9fa"
+                    })}
+                  />
                 </div>
-                <h2 className="content">{skill.description}</h2>
+                <p className="content">{skill.description}</p>
               </div>
             </div>
           ))}
@@ -30,3 +42,5 @@ export default function Skills({ skills = [] }) {
     </div>
   );
 }
+
+

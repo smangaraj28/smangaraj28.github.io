@@ -2,8 +2,8 @@ import "./styles.css";
 import Home from "./Component/Home/Home";
 import About from "./Component/About/About";
 import Skills from "./Component/Skills/Skills";
+import WorkExperience from "./Component/WorkExperience/WorkExperience";
 import Navbar from "./Component/Navbar/Navbar";
-import Topnav from "./Component/Navbar/TopNavbar";
 import Project from "./Component/Projects/Project";
 import Contact from "./Component/Contact/Contact";
 import BottomNavbar from "./Component/Navbar/BottomNavbar";
@@ -17,13 +17,14 @@ export default function App() {
     <>
       {/* <Model /> */}
       {/* <Topnav /> */}
-      <Home personal={user.personal} links={user.links}/>
-      <About personal={user.personal} links={user.links}/>
-      <Skills skills={user.skills}/>
-      <Project {...user.projects}/>
-      <Contact {...user.personal}/>
+      <Home personalInfo={user.personalInfo} contactInfo={user.contactInfo}/>
+      <About personalInfo={user.personalInfo} contactInfo={user.contactInfo}/>
+      <Skills skills={user.technicalSkills}/>
+      <WorkExperience workExperience={user.workExperience}/>
+      <Project projects={user.projects}/>
+      <Contact {...user.personalInfo}/>
       <div className="navC">
-        <Navbar />
+      <Navbar />
       </div>
       <Footer />
       <div className="navbar">

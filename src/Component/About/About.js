@@ -1,33 +1,29 @@
 import "../Home/Home.css";
 import { useState, useEffect } from "react";
 import aboutimg from "../../assets/036.png";
-import { MdPersonOutline, MdOutlineEvent } from "react-icons/md";
+import { MdPersonOutline, MdOutlineEvent, MdWorkOutline } from "react-icons/md";
 import { BiMailSend } from "react-icons/bi";
-import { BsLightningCharge } from "react-icons/bs";
+import { BsLightningCharge, BsBuilding } from "react-icons/bs";
 import Links from "../../Component/Links/Links";
 
-export default function About({ personal = {}, links = [] }) {
+export default function About({ personalInfo = {}, contactInfo = {} }) {
   const [dark, setDark] = useState(false);
-  const { name = "", details = "", email = "", dob = "" } = personal;
+  const { fullName = "", email = "", dob = "", title = "", company = "", professionalSummary = "" } = personalInfo;
   const [age, setAge] = useState(null);
 
   useEffect(() => {
     if (dob) {
-      const parts = dob.split("-");
-      if (parts.length === 3) {
-        const formattedDob = `${parts[2]}-${parts[1]}-${parts[0]}`;
-        const birthDate = new Date(formattedDob);
-        if (!isNaN(birthDate.getTime())) {
-          const today = new Date();
-          let calculatedAge = today.getFullYear() - birthDate.getFullYear();
-          if (
-            today.getMonth() < birthDate.getMonth() ||
-            (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())
-          ) {
-            calculatedAge -= 1;
-          }
-          setAge(calculatedAge);
+      const birthDate = new Date(dob);
+      if (!isNaN(birthDate.getTime())) {
+        const today = new Date();
+        let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+        if (
+          today.getMonth() < birthDate.getMonth() ||
+          (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())
+        ) {
+          calculatedAge -= 1;
         }
+        setAge(calculatedAge);
       }
     }
   }, [dob]);
@@ -56,7 +52,7 @@ export default function About({ personal = {}, links = [] }) {
         </h1>
         
         <div className="about-content">
-          <p>{details}</p>
+          <p>{professionalSummary}</p>
         </div>
         
         <div className="main-table">
@@ -64,7 +60,11 @@ export default function About({ personal = {}, links = [] }) {
             <tbody>
               <tr>
                 <td><MdPersonOutline className="avatar" /></td>
-                <td>{name}</td>
+                <td>{fullName}</td>
+              </tr>
+              <tr>
+                <td><MdWorkOutline className="avatar" /></td>
+                <td>{title} at {company}</td>
               </tr>
               <tr>
                 <td><BiMailSend className="avatar" /></td>
@@ -84,7 +84,7 @@ export default function About({ personal = {}, links = [] }) {
           <br />
         </div>
         
-        <Links links={links} />
+        <Links links={contactInfo} />
       </div>
     </div>
   );
