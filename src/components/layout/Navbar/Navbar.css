@@ -1,21 +1,3 @@
-.top-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: row wrap;
-  z-index: 99999;
-  width: 100%;
-  height: 40px;
-  position: relative;
-  top: 0%;
-  padding: 1rem;
-}
-.top-navbar .logo {
-  margin-right: 4rem;
-  width: fit-content;
-  font-size: 2rem;
-  color: rgb(39, 39, 39);
-}
 .profile {
   width: 100%;
   top: 170%;
@@ -33,12 +15,7 @@
   z-index: 999999;
   display: none;
 }
-.top-navbar .authSection {
-  display: flex;
-  justify-content: start;
-  width: fit-content;
-  position: relative;
-}
+
 .hide {
   display: flex;
   justify-content: center;
@@ -91,13 +68,6 @@
   display: block;
 }
 
-.top-navbar div b {
-  display: flex;
-  gap: 0.3rem;
-  font-size: 0.9rem;
-  align-items: center;
-  color: rgb(63, 61, 61);
-}
 .boll {
   display: flex;
   justify-content: center;
@@ -164,16 +134,4 @@
   padding: 0.5rem;
   transition: all 300ms;
   color: rgb(128, 128, 128);
-}
-.navC {
-  width: fit-content;
-  position: fixed;
-  top: 35%;
-  margin: 1.5rem;
-}
-
-@media only screen and (max-width: 1000px) {
-  .navC {
-    display: none;
-  }
 }

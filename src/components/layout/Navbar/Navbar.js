@@ -11,6 +11,7 @@ import { useState } from "react";
 const menuItems = [
   { name: "home", icon: <BiHome /> },
   { name: "About", icon: <MdOutlineAssignmentInd /> },
+
   { name: "Work Experience", icon: <MdOutlineAssignment /> },
   { name: "Skills", icon: <MdOutlineAssignment /> },
   { name: "Projects", icon: <MdTurnedInNot /> },
