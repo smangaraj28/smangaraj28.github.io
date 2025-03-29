@@ -1,3 +1,6 @@
+/* ==========================
+   Skills Section
+========================== */
 #Skills {
   margin-top: 5rem;
   padding-top: 2rem;
@@ -7,21 +10,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 
-/* Skills Grid */
+/* ==========================
+   Skills Grid Layout
+========================== */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Auto-adjusting tiles */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  justify-content: center;
-  align-items: stretch;
   padding: 1rem;
+  width: 100%;
   box-sizing: border-box;
 }
 
-/* Skill Card */
+/* ==========================
+   Skill Card Styling
+========================== */
 .grid-item {
   background: #f8f9fa;
   padding: 1.5rem;
@@ -36,26 +42,25 @@
   max-width: 100%;
 }
 
-/* Hover effect for skills */
 .grid-item:hover {
-  transform: scale(1.05); /* Slight hover effect */
+  transform: scale(1.05);
 }
 
-/* Cards layout for skill name, progress bar, and description */
+/* ==========================
+   Skill Card Content
+========================== */
 .Cards {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Circular progress container */
 .progress-container {
   width: 80px;
   height: 80px;
   margin: 10px auto;
 }
 
-/* Description content */
 .content {
   margin-top: 0.5rem;
   font-size: 0.9rem;
@@ -63,37 +68,17 @@
   text-align: center;
 }
 
-/* Responsive Fix for Smaller Screens */
-@media (max-width: 768px) {
+/* ==========================
+   Responsive Adjustments
+========================== */
+@media (max-width: 1024px) {
   .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust column width for smaller screens */
-  }
-
-  .grid-item {
-    padding: 1rem; /* Reduce padding for mobile screens */
-  }
-
-  .progress-container {
-    width: 70px; /* Smaller progress circle on mobile */
-    height: 70px;
-  }
-
-  .content {
-    font-size: 0.85rem; /* Slightly smaller font size */
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
   }
 }
 
-@media (max-width: 400px) {
-  .grid-item {
-    padding: 0.8rem; /* Further reduce padding for very small screens */
-  }
-
-  .progress-container {
-    width: 60px;
-    height: 60px;
-  }
-
-  .content {
-    font-size: 0.8rem; /* Further decrease font size */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
   }
 }

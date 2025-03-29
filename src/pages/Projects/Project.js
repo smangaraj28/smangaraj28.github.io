@@ -32,12 +32,9 @@ function ProjectCard({ title, description, techStack, link }) {
 export default function Projects({ projects = [] }) {
   return (
     <section className="box-center-row" id="Projects">
-      <div className="subTitle">
-        <h2>
-          <MdOutlineAssignmentInd className="avatar" /> Projects
-        </h2>
-      </div>
-
+      <h1>
+        Projects
+      </h1>
       <div className="grid-container">
         {projects.map((item, index) => (
           <ProjectCard key={index} {...item} />

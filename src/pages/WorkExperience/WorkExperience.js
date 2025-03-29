@@ -6,12 +6,9 @@ import { MdWorkOutline } from "react-icons/md";
 export default function WorkExperience({ workExperience = [] }) {
   return (
     <section className="work-experience-section" id="WorkExperience">
-      <div className="subTitle">
-        <h2>
-          <MdWorkOutline className="avatar" /> Work Experience
-        </h2>
-      </div>
-
+      <h1 className="box-center-row">
+        Work Experience
+      </h1>
       <VerticalTimeline>
         {workExperience.map((job, index) => (
           <VerticalTimelineElement

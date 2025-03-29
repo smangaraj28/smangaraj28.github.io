@@ -1,64 +1,107 @@
-/* Container for Projects */
+/* ==========================
+   Projects Section
+========================== */
+
 .projects-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  width: 100%;
 }
 
-/* Projects Grid */
+/* ==========================
+   Projects Grid Layout
+========================== */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Auto-adjusting tiles */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  justify-content: center;
-  align-items: stretch;
   padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Project Card */
+/* ==========================
+   Project Card Styling
+========================== */
 .grid-item {
-  background: white;
-  padding: 20px;
+  background: #f8f9fa;
+  padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 300px;
+  min-height: 250px;
   max-width: 100%;
 }
 
-/* Updated Explore Button */
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================
+   Project Card Content
+========================== */
+.Cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Card-header h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.content {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+}
+
+/* ==========================
+   Explore Button Styling
+========================== */
+.bottom-button-export {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
 .explorebtn {
   font-size: 1rem;
   font-weight: 600;
-  color: #ff6b00; /* Vibrant orange */
+  color: #ff6b00;
   background: none;
   border: none;
   cursor: pointer;
   text-decoration: underline;
-  padding: 5px 10px; /* Added slight padding */
   transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .explorebtn:hover {
-  color: #cc5600; /* Slightly darker orange */
-  transform: scale(1.05); /* Small hover effect */
+  color: #cc5600;
+  transform: scale(1.05);
 }
 
-/* Adjust spacing for better alignment */
-.bottom-button-export {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1rem; /* Added spacing */
-  padding-right: 8px; /* Small right padding */
+/* ==========================
+   Responsive Adjustments
+========================== */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
 }
 
-
-/* Responsive Fix for Smaller Screens */
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
   }
 }
