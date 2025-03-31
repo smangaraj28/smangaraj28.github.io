@@ -35,36 +35,22 @@ export default function About({ personalInfo = {}, contactInfo = {} }) {
     <div className="Home" id="About">
       <div className="header">
         <h1>About Me</h1>
-        
         <div className="about-content">
           <p>{professionalSummary}</p>
         </div>
-        
+
         <div className="main-table">
           <table>
             <tbody>
-              <tr>
-                <td><MdPersonOutline className="avatar" /></td>
-                <td>{fullName}</td>
-              </tr>
-              <tr>
-                <td><MdWorkOutline className="avatar" /></td>
-                <td>{title} at {company}</td>
-              </tr>
-              <tr>
-                <td><BiMailSend className="avatar" /></td>
-                <td>{email}</td>
-              </tr>
-              <tr>
-                <td><MdOutlineEvent className="avatar" /></td>
-                <td>{formatDate(dob)}</td> {/* Formatted date */}
-              </tr>
+              <tr><td><MdPersonOutline className="avatar" /></td><td>{fullName}</td></tr>
+              <tr><td><MdWorkOutline className="avatar" /></td><td>{title} at {company}</td></tr>
+              <tr><td><BiMailSend className="avatar" /></td><td>{email}</td></tr>
+              <tr><td><MdOutlineEvent className="avatar" /></td><td>{formatDate(dob)}</td></tr>
             </tbody>
           </table>
           <hr />
-          <br />
         </div>
-        
+
         <Links {...contactInfo} />
       </div>
     </div>

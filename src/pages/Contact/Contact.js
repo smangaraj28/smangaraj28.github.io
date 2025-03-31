@@ -43,7 +43,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="Contact">
       <div className="contact-card">
         <h2 className="contact-title">Get in Touch</h2>
         <p className="contact-subtitle">I'd love to hear from you!</p>

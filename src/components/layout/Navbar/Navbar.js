@@ -9,13 +9,13 @@ import { BiHome } from "react-icons/bi";
 import { useState } from "react";
 
 const menuItems = [
-  { name: "home", icon: <BiHome /> },
-  { name: "About", icon: <MdOutlineAssignmentInd /> },
+  { name: "home",route: "Home",icon: <BiHome /> },
+  { name: "About",route: "About", icon: <MdOutlineAssignmentInd /> },
 
-  { name: "Work Experience", icon: <MdOutlineAssignment /> },
-  { name: "Skills", icon: <MdOutlineAssignment /> },
-  { name: "Projects", icon: <MdTurnedInNot /> },
-  { name: "Contact", icon: <MdOutlineContacts /> },
+  { name: "Work Experience",route: "WorkExperience", icon: <MdOutlineAssignment /> },
+  { name: "Skills",route: "Skills", icon: <MdOutlineAssignment /> },
+  { name: "Projects",route: "Projects", icon: <MdTurnedInNot /> },
+  { name: "Contact",route: "Contact", icon: <MdOutlineContacts /> },
 ];
 
 export default function Navbar() {
@@ -26,7 +26,7 @@ export default function Navbar() {
       {menuItems.map((item, index) => (
         <a
           key={item.name}
-          href={`#${item.name}`}
+          href={`#${item.route}`}
           className={activeIndex === index ? "active" : "inactive"}
           onClick={() => setActiveIndex(index)}
         >

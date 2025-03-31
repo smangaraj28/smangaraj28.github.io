@@ -9,7 +9,7 @@ import Contact from "./pages/Contact/Contact";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Footer from "./pages/Footer/Footer";
 import Context from "./Data/data";
-import { useDarkMode } from "./contexts/DarkModeContext"; 
+import { useDarkMode } from "./contexts/DarkModeContext";
 
 export default function App() {
   const { personalInfo, contactInfo, technicalSkills, workExperience, projects } = useContext(Context);
@@ -22,8 +22,8 @@ export default function App() {
       </button>
       <Home personalInfo={personalInfo} contactInfo={contactInfo} />
       <About personalInfo={personalInfo} contactInfo={contactInfo} />
-      <Skills skills={technicalSkills} />
       <WorkExperience workExperience={workExperience} />
+      <Skills skills={technicalSkills} />
       <Project projects={projects} />
       <Contact {...personalInfo} />
       <Footer />
