@@ -1,46 +1,58 @@
-import "./Projects.css";
-import { MdOutlineAssignmentInd, MdOutlineLabel } from "react-icons/md";
 import { FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
+import "./Projects.css";
 
-// Card Component for reusability
-function ProjectCard({ title, description, techStack, link }) {
+function ProjectCard({ title, description, techStack, link, index }) {
   return (
-    <div className="grid-item">
-      <div className="Cards">
-        <div className="Card-header">
+    <motion.div
+      className="project-card"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ scale: 1.03 }}
+    >
+      <div className="card-content">
+        <div className="card-header">
           <h2>{title}</h2>
         </div>
-        <p className="content">{description}</p>
-        <div className="bottom-button-export">
-          <div className="text">
-            <b>{techStack.join(", ")}</b>
-          </div>
-          {link && (
-            <a className="explorebtn" href={link} target="_blank" rel="noopener noreferrer">
-              <div className="text">
-                <FiExternalLink className="icon" />
-              </div>
-            </a>
-          )}
+        <p className="project-description">{description}</p>
+        <div className="tech-stack">
+          {techStack.map((tech, i) => (
+            <span key={i} className="tech-pill">{tech}</span>
+          ))}
         </div>
+        {link && (
+          <a 
+            href={link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            <FiExternalLink className="link-icon" />
+            View Project
+          </a>
+        )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
-// Main Projects Component
 export default function Projects({ projects = [] }) {
+  // Limit to 4 projects for no-scroll layout
+  const displayedProjects = projects.slice(0, 4);
+
   return (
-    <section className="box-center-row" id="Projects">
-      <h1>
-        Projects
-      </h1>
-      <div className="grid-container">
-        {projects.map((item, index) => (
-          <ProjectCard key={index} {...item} />
+    <section className="projects-container" id="projects">
+      <div className="projects-header">
+        <h1>Featured Projects</h1>
+        <p>Selected works that showcase my skills</p>
+      </div>
+
+      <div className="projects-grid">
+        {displayedProjects.map((project, index) => (
+          <ProjectCard key={index} index={index} {...project} />
         ))}
       </div>
     </section>
   );
 }
-

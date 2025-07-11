@@ -6,33 +6,28 @@ import {
   MdOutlineContacts,
 } from "react-icons/md";
 import { BiHome } from "react-icons/bi";
-import { useState } from "react";
 
 const menuItems = [
-  { name: "home",route: "Home",icon: <BiHome /> },
-  { name: "About",route: "About", icon: <MdOutlineAssignmentInd /> },
-
-  { name: "Work Experience",route: "WorkExperience", icon: <MdOutlineAssignment /> },
-  { name: "Skills",route: "Skills", icon: <MdOutlineAssignment /> },
-  { name: "Projects",route: "Projects", icon: <MdTurnedInNot /> },
-  { name: "Contact",route: "Contact", icon: <MdOutlineContacts /> },
+  { name: "Home", route: "Home", icon: <BiHome /> },
+  { name: "About", route: "About", icon: <MdOutlineAssignmentInd /> },
+  { name: "Work Experience", route: "WorkExperience", icon: <MdOutlineAssignment /> },
+  { name: "Skills", route: "Skills", icon: <MdOutlineAssignment /> },
+  { name: "Projects", route: "Projects", icon: <MdTurnedInNot /> },
+  { name: "Contact", route: "Contact", icon: <MdOutlineContacts /> },
 ];
 
-export default function Navbar() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+export default function Navbar({ currentPage, setCurrentPage }) {
   return (
     <nav className="navbar">
       {menuItems.map((item, index) => (
-        <a
+        <button
           key={item.name}
-          href={`#${item.route}`}
-          className={activeIndex === index ? "active" : "inactive"}
-          onClick={() => setActiveIndex(index)}
+          className={currentPage === item.route ? "active" : "inactive"}
+          onClick={() => setCurrentPage(item.route)}
         >
           {item.icon}
           <b>{item.name}</b>
-        </a>
+        </button>
       ))}
     </nav>
   );

@@ -1,47 +1,47 @@
 import "./Home.css";
 import { MdOutlineFileDownload, MdWork } from "react-icons/md";
 import Links from "../Links/Links";
-import hero from "../../assets/034.png";
-import profileimg from "../../assets/profile.jpeg";
+import profile_img from "../../assets/profile.jpeg";
 
 export default function Home({ personalInfo = {}, contactInfo = {} }) {
-  const { fullName = "", professionalSummary = "", title = "", company = "", resumeUrl = "" } = personalInfo;
+  const { fullName = "", bio = "", title = "", company = "", resumeUrl = "" } = personalInfo;
 
   return (
-    <section className="Home" id="home">
-      {/* Profile & Header */}
-      <div className="header">
-        <img src={profileimg} alt="Profile" />
-
-        <h1>
-          {fullName.split(" ")[0]} <span>{fullName.split(" ")[1]}</span> {fullName.split(" ")[2]}
-        </h1>
-
-        <p>{professionalSummary}</p>
-
-        <Links {...contactInfo} />
-
-        <div className="status-container">
-          <MdWork className="status-icon" />
-          <span className="status-text">{title} at {company}</span>
-        </div>
-
-        {/* Resume Button */}
-        <div className="buttons-group">
-          {resumeUrl && (
-            <button>
-              <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-                <span>Resume</span>
-                <MdOutlineFileDownload />
-              </a>
-            </button>
-          )}
-        </div>
+    <section className="home-container">
+      {/* Left Column - Profile Image */}
+      <div className="profile-column">
+        <img src={profile_img} alt="Profile" className="profile-image" />
       </div>
 
-      {/* Hero Image */}
-      <div className="hero">
-        <img src={hero} alt="Hero" />
+      {/* Right Column - Content */}
+      <div className="content-column">
+        <div className="content-wrapper">
+          <h1 className="name-heading">
+            {fullName}
+          </h1>
+
+          <p className="professional-title">
+            {title} @{company}
+          </p>
+
+          <p className="summary-text">{bio}</p>
+
+          <div className="links-container">
+            <Links {...contactInfo} />
+          </div>
+
+          {resumeUrl && (
+            <a
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-button"
+            >
+              <span>Download Resume</span>
+              <MdOutlineFileDownload className="download-icon" />
+            </a>
+          )}
+        </div>
       </div>
     </section>
   );

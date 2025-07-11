@@ -1,83 +1,233 @@
-.work-experience-section {
-  margin-top: 5rem;
+.horizontal-timeline-container {
   padding: 2rem;
-  background: linear-gradient(to bottom, #f4f7ff, #ffffff);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Ensures everything inside is centered */
 }
 
-.work-experience-section h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  display: block;
-  margin: 0 auto; /* Centers it horizontally */
+.dark-mode .horizontal-timeline-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
-.subTitle {
+.timeline-header {
   text-align: center;
+  margin-bottom: 3rem;
+}
+
+.timeline-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.timeline-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.horizontal-timeline {
+  display: flex;
+  align-items: flex-start;
+  min-width: max-content;
+  padding: 0 2rem;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  max-width: 350px;
+  flex-shrink: 0;
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  position: relative;
+  border-top: 4px solid #3b82f6;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .timeline-card {
+  background: rgba(30, 41, 59, 0.95);
+  border-top: 4px solid #60a5fa;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-connector {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  min-width: 80px;
+}
+
+.connector-line {
+  flex-grow: 1;
+  height: 2px;
+  background: #3b82f6;
+  opacity: 0.3;
+}
+
+.connector-arrow {
+  color: #3b82f6;
+  font-size: 1.5rem;
+  margin-left: -10px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.company-icon-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.company-icon {
   font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 2rem;
+  color: #3b82f6;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.company-name {
+.company-badge {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: #3b82f6;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: 2px solid white;
+}
+
+.card-header h2 {
   font-size: 1.4rem;
-  font-weight: bold;
-  color: #1f2937;
+  margin: 0;
+  color: var(--text-primary);
 }
 
-.role {
+.date-range {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+.timeline-card h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  margin: 5px 0;
-  color: #555;
+  color: var(--text-secondary);
+  margin: 0.5rem 0 1rem;
 }
 
 .tech-stack {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #007bff;
-  background: rgba(0, 123, 255, 0.1);
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.vertical-timeline-element-content {
-  border-left: 5px solid #007bff !important;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1) !important;
-  padding: 20px !important;
-  transition: all 0.3s ease-in-out;
+.tech-pill {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dark-mode .tech-pill {
+  color: #93c5fd;
+}
+
+.tech-pill svg, .tech-pill span {
+  font-size: 0.9rem;
+}
+
+/* Custom scrollbar */
+.timeline-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
 
-.vertical-timeline-element-content:hover {
-  transform: scale(1.03);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15) !important;
+.timeline-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 10px;
 }
 
-.vertical-timeline-element-content-arrow {
-  border-right: 7px solid #007bff !important;
-}
-
-.vertical-timeline-element-date {
-  font-size: 1rem !important;
-  font-weight: 600;
-  color: #555 !important;
-}
-
-.vertical-timeline-element-icon {
-  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.4) !important;
-  border: 3px solid white !important;
+.timeline-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
 }
 
 @media (max-width: 768px) {
-  .subTitle {
-    font-size: 1.5rem;
+  .timeline-header h1 {
+    font-size: 2rem;
+  }
+  
+  .timeline-item {
+    min-width: 280px;
+  }
+  
+  .timeline-connector {
+    min-width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .card-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .tech-pill {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .timeline-scroll-container {
+    padding: 1rem 0;
+  }
+  
+  .horizontal-timeline {
+    padding: 0 1rem;
   }
 }

@@ -4,7 +4,7 @@
       "email": "smangaraj28@gmail.com",
       "dob": "1996-02-28",
       "title": "Senior Software Engineer",
-      "company": "Goldman Sachs",
+      "company": "Oracle Cloud ( OCI ) ",
       "resumeUrl": "https://drive.google.com/file/d/1OhEx2sSWkRf03yorIz6WS-BRKGURwRKj/view?usp=sharing",
       "address": {
         "street": "Mangaraj Bhavan, Near Park Land Hospital",
@@ -14,7 +14,7 @@
         "postalCode": "752055"
       },
       "bio": "Engineer by Profession 🧑🏽‍💻 & Teacher by Passion ❤️",
-      "professionalSummary": "I'm currently working as a senior software engineer at Goldman Sachs. Strong believer in work, not designation. Passionate about mentoring and helping individuals grow in the field of computer science."
+      "professionalSummary": "Strong believer in work, not designation. Passionate about mentoring and helping individuals grow in the field of computer science."
     },
     "contactInfo": {
       "linkedin": "https://www.linkedin.com/in/soumya-sambit-mangaraj/",
@@ -52,6 +52,7 @@
         "company": "Goldman Sachs",
         "role": "Associate Software Engineer",
         "startDate": "2023-05",
+        "endDate": "2024-06",
         "techStack": ["Java", "Spring Boot", "Big Data", "Hadoop", "MapReduce", "HBase", "HDFS"]
       },
       {

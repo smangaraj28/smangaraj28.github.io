@@ -1,142 +1,176 @@
-/* Home Section */
-.Home {
-  min-height: 100vh;
+/* Home Container */
+.home-container {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.dark-mode .home-container {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+
+/* Profile Column */
+.profile-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
-  transition: all 0.3s ease-in-out;
+  padding: 2rem;
+  position: relative;
 }
 
-/* Header Section */
-.header {
-  text-align: center;
-  max-width: 800px;
-}
-
-/* Profile Image */
-.header img {
-  max-width: 150px;
+.profile-image {
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  transition: transform 0.3s ease-in-out;
-}
-.header img:hover {
-  transform: scale(1.05);
-}
-
-/* Name Styling */
-.header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  text-transform: capitalize;
-}
-.header h1 span {
-  color: var(--primary-color);
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Summary */
-.header p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  line-height: 1.5;
-  text-align: justify;
+.profile-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Content Column */
+.content-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.content-wrapper {
   max-width: 600px;
 }
 
-/* Work Status */
-.status-container {
+/* Typography */
+.name-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.name-heading span {
+  display: inline-block;
+}
+
+.highlighted {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.highlighted::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(3, 146, 203, 0.3);
+  z-index: -1;
+}
+
+.professional-title {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+/* Links Container */
+.links-container {
+  margin: 2rem 0;
+}
+
+/* Resume Button */
+.resume-button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--text-dark);
-}
-.status-icon {
-  font-size: 40px;
-}
-
-/* Buttons */
-.buttons-group {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-/* Buttons */
-.buttons-group button {
-  background: rgb(3, 146, 203); /* Blue background */
-  color: white;  /* Text color */
-  border: none;
   padding: 1rem 2rem;
-  font-size: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
   font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: all 0.3s ease-in-out;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(3, 146, 203, 0.3);
 }
 
-/* Button Hover Effect */
-.buttons-group button:hover {
-  background: #02058d;  /* Darker shade of blue on hover */
+.resume-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(3, 146, 203, 0.4);
+  background-color: #0284b5;
 }
 
-/* Resume Button Link */
-.buttons-group a {
-  color: white;  /* Make sure the link text is white */
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-.buttons-group button a {
-  color: white;  /* Ensure the link inside the button is white */
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-
-/* Specifically target the span for the Resume text */
-.buttons-group button a span {
-  color: white;  /* Make sure the text in the span is white */
-}
-
-
-/* Hero Image */
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-.hero img {
-  max-width: 80%;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-}
-.hero img:hover {
-  transform: scale(1.03);
+.download-icon {
+  font-size: 1.2rem;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .Home {
-    padding: 3rem 1rem;
+@media (max-width: 992px) {
+  .home-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
   }
-  .header h1 {
+
+  .profile-column {
+    padding: 2rem 1rem;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .content-column {
+    padding: 1rem;
+  }
+
+  .name-heading {
+    font-size: 2.5rem;
+  }
+
+  .professional-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .name-heading {
     font-size: 2rem;
   }
-  .header p {
+
+  .professional-title {
     font-size: 1rem;
   }
-  .hero img {
-    max-width: 90%;
+
+  .summary-text {
+    font-size: 1rem;
+  }
+
+  .resume-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 }

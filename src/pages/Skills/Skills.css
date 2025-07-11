@@ -1,84 +1,135 @@
-/* ==========================
-   Skills Section
-========================== */
-#Skills {
-  margin-top: 5rem;
-  padding-top: 2rem;
-}
-
-.Skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Skills Section - Compact Version */
+.skills-section {
   width: 100%;
-}
-
-/* ==========================
-   Skills Grid Layout
-========================== */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* ==========================
-   Skill Card Styling
-========================== */
-.grid-item {
+  min-height: auto;
+  padding: 2rem 1rem;
   background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-header {
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+
+.skills-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.skills-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.skills-categories {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 250px;
-  max-width: 100%;
+  gap: 1.5rem;
 }
 
-.grid-item:hover {
-  transform: scale(1.05);
+.category {
+  margin-bottom: 1rem;
 }
 
-/* ==========================
-   Skill Card Content
-========================== */
-.Cards {
+.category-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+
+.category-title.expert {
+  color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.category-title.proficient {
+  color: #2196F3;
+  border-color: #2196F3;
+}
+
+.category-title.learning {
+  color: #FF9800;
+  border-color: #FF9800;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+}
+
+.skill-icon {
+  margin-bottom: 0.5rem;
+}
+
+.icon-wrapper {
+  font-size: 2rem;
+  color: #333;
+}
+
+.skill-content {
+  width: 100%;
+  text-align: center;
+}
+
+.skill-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .progress-container {
   width: 80px;
   height: 80px;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 
-.content {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #333;
-  text-align: center;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
 
-/* ==========================
-   Responsive Adjustments
-========================== */
-@media (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  .progress-container {
+    width: 70px;
+    height: 70px;
   }
 }
 
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(1, minmax(280px, 1fr));
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .skill-card {
+    padding: 0.75rem;
+  }
+
+  .progress-container {
+    width: 60px;
+    height: 60px;
   }
 }

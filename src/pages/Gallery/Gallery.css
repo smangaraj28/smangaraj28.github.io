@@ -1,0 +1,38 @@
+/* Gallery Container with Grid and Centered Layout */
+.gallery-container {
+    display: grid;
+    place-items: center; /* Center the content horizontally and vertically */
+    height: 100vh; /* Full height to center vertically */
+    margin: 20rem; /* Margin around the container */
+  }
+  
+  /* Gallery Styling */
+  .gallery {
+    width: 100%;
+    max-width: 1000px; /* Max-width to avoid stretching */
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ccc; /* Border around the gallery */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle lift effect */
+  }
+  
+  /* Carousel Image Styling */
+  .carousel .carousel-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 600px; /* Optional: Limit the image size */
+    object-fit: cover; /* Ensures proper scaling without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin: 0 auto; /* Center the image */
+  }
+  
+  /* Legend Text Styling */
+  .carousel .legend {
+    font-size: 18px;
+    color: #333; /* Text color for engraving */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+  }
+  
