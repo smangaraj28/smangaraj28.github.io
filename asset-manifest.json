@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/smangaraj-personal/static/css/main.c29d5cac.css",
-    "main.js": "/smangaraj-personal/static/js/main.dac41ffe.js",
+    "main.css": "/smangaraj-personal/static/css/main.9378e4d6.css",
+    "main.js": "/smangaraj-personal/static/js/main.1b8862c2.js",
     "static/media/profile.jpeg": "/smangaraj-personal/static/media/profile.ec3df067854772544b8a.jpeg",
+    "static/media/036.png": "/smangaraj-personal/static/media/036.70b8c2a0bbd0ce47b226.png",
+    "static/media/about.png": "/smangaraj-personal/static/media/about.b7f7e4d3c3243ef3f7a5.png",
     "static/media/034.png": "/smangaraj-personal/static/media/034.7bdbc1a0d7e7b072ca3e.png",
     "index.html": "/smangaraj-personal/index.html",
-    "main.c29d5cac.css.map": "/smangaraj-personal/static/css/main.c29d5cac.css.map",
-    "main.dac41ffe.js.map": "/smangaraj-personal/static/js/main.dac41ffe.js.map"
+    "main.9378e4d6.css.map": "/smangaraj-personal/static/css/main.9378e4d6.css.map",
+    "main.1b8862c2.js.map": "/smangaraj-personal/static/js/main.1b8862c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.c29d5cac.css",
-    "static/js/main.dac41ffe.js"
+    "static/css/main.9378e4d6.css",
+    "static/js/main.1b8862c2.js"
   ]
 }
