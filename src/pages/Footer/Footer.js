@@ -13,8 +13,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <h1>Bapu</h1>
-        <p>© {new Date().getFullYear()} Bapu. All rights reserved.</p>
+        <div className="footer-brand">
+          <h1 className="footer-title">Bapu</h1>
+          <p className="footer-copyright">
+            © {new Date().getFullYear()} Bapu. All rights reserved.
+          </p>
+        </div>
 
         <div className="social-links">
           {socialLinks.map((link, index) => (
@@ -23,10 +27,11 @@ const Footer = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="social-icon"
+              className="social-link"
               aria-label={link.label}
             >
-              {link.icon}
+              <span className="social-icon">{link.icon}</span>
+              <span className="sr-only">{link.label}</span>
             </a>
           ))}
         </div>
