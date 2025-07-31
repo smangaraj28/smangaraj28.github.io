@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.502f3115.css",
-    "main.js": "/static/js/main.9b66fb9d.js",
+    "main.css": "/static/css/main.5c9052c5.css",
+    "main.js": "/static/js/main.c130eb4b.js",
     "static/media/baba_mumy_img.JPG": "/static/media/baba_mumy_img.88b27344ab84693918b1.JPG",
     "static/media/profile_img.jpeg": "/static/media/profile_img.ec3df067854772544b8a.jpeg",
     "index.html": "/index.html",
-    "main.502f3115.css.map": "/static/css/main.502f3115.css.map",
-    "main.9b66fb9d.js.map": "/static/js/main.9b66fb9d.js.map"
+    "main.5c9052c5.css.map": "/static/css/main.5c9052c5.css.map",
+    "main.c130eb4b.js.map": "/static/js/main.c130eb4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.502f3115.css",
-    "static/js/main.9b66fb9d.js"
+    "static/css/main.5c9052c5.css",
+    "static/js/main.c130eb4b.js"
   ]
 }
