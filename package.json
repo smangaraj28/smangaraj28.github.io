@@ -1,9 +1,9 @@
 {
-  "name": "smangaraj-personal",
+  "name": "smangaraj28.github.io",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "http://smangaraj28.github.io/smangaraj-personal",
+  "homepage": "https://smangaraj28.github.io/",
   "main": "src/index.js",
   "dependencies": {
     "emailjs-com": "^3.2.0",
