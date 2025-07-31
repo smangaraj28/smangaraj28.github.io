@@ -1,83 +1,103 @@
-import { MdWork } from "react-icons/md";
 import { FaAws, FaGoogle, FaJava } from "react-icons/fa";
 import { SiPython, SiDjango, SiReact, SiOracle, SiApache } from "react-icons/si";
 import "./WorkExperience.css";
 
 const techIcons = {
   "Java": <FaJava />,
-  "Spring Boot": <FaJava />,
+  "Springboot": <FaJava />,
   "AWS": <FaAws />,
-  "AngularJS": <span>JS</span>,
+  "Angular JS": <span>JS</span>,
   "Python": <SiPython />,
   "Django": <SiDjango />,
-  "Node.js": <span>JS</span>,
+  "Node Js": <span>JS</span>,
   "React": <SiReact />,
   "GCP": <FaGoogle />,
   "Hadoop": <SiApache />,
   "HBase": <SiApache />,
   "HDFS": <SiApache />,
-  "OCI": <SiOracle />,
+  "OCI Cloud": <SiOracle />,
   "Big Data": <SiApache />,
   "MapReduce": <SiApache />
 };
 
-export default function WorkExperience({ workExperience }) {
-  // Sort by start date (oldest first)
-  const sortedExperience = [...workExperience].sort((a, b) => {
-    const dateA = new Date(a.startDate);
-    const dateB = new Date(b.startDate);
-    return dateA - dateB;
-  });
-
-  const formatDate = (dateString) => {
-    if (!dateString) return "Present";
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+const getCompanyLogoUrl = (company) => {
+  const domains = {
+    "Oracle Cloud (OCI)": "oracle.com",
+    "Goldman Sachs": "goldmansachs.com",
+    "ADP": "adp.com",
+    "Delhivery": "delhivery.com",
+    "PayPal": "paypal.com"
   };
+  return `https://logo.clearbit.com/${domains[company] || company.toLowerCase().replace(/\s+/g, '') + ".com"}`;
+};
+
+const formatDate = (dateString) => {
+  if (!dateString || dateString.toLowerCase() === "present") return "Present";
+  const date = new Date(dateString.replace(/-/g, " "));
+  if (isNaN(date)) return dateString; 
+  return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+};
+
+export default function WorkExperience({ employement }) {
+  const sortedExperience = [...employement].sort(
+    (a, b) => new Date(a.startPeriod) - new Date(b.startPeriod)
+  );
 
   return (
-    <div className="horizontal-timeline-container">
+    <div className="vertical-timeline-container">
       <div className="timeline-header">
         <h1>Professional Journey</h1>
         <p>My career timeline and key milestones</p>
       </div>
-      
-      <div className="timeline-scroll-container">
-        <div className="horizontal-timeline">
-          {sortedExperience.map((exp, index) => (
-            <div key={index} className="timeline-item">
+      <div className="vertical-timeline">
+        {sortedExperience.map((exp, index) => {
+          const techArray = exp.techstack.split(",").map(t => t.trim());
+          return (
+            <div
+              key={index}
+              className={`vertical-timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+            >
+              {/* Dates */}
+              <div className="timeline-left">
+                {formatDate(exp.startPeriod)} <br /> - <br /> {formatDate(exp.endingPeriod)}
+              </div>
+
+              {/* Card */}
               <div className="timeline-card">
-                <div className="card-header">
-                  <div className="company-icon-container">
-                    <MdWork className="company-icon" />
-                    <div className="company-badge">{exp.company.charAt(0)}</div>
-                  </div>
-                  <div>
+                <div className="timeline-header-row">
+                  <div className="timeline-company-info">
                     <h2>{exp.company}</h2>
-                    <div className="date-range">
-                      {formatDate(exp.startDate)} - {formatDate(exp.endDate)}
-                    </div>
+                    <h3>{exp.designation}</h3>
+                    <span className="location">{exp.location}</span>
                   </div>
+                  <img
+                    src={getCompanyLogoUrl(exp.company)}
+                    alt={`${exp.company} logo`}
+                    className="company-logo-large"
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/80"; }}
+                  />
                 </div>
-                <h3>{exp.role}</h3>
+
+                {/* Description */}
+                <p className="experience-description">{exp.description}</p>
+
+                {/* Awards */}
+                {exp.awards && exp.awards.trim() !== "" && (
+                  <div className="awards">🏆 {exp.awards}</div>
+                )}
+
+                {/* Tech stack */}
                 <div className="tech-stack">
-                  {exp.techStack.map((tech, i) => (
+                  {techArray.map((tech, i) => (
                     <span key={i} className="tech-pill">
-                      {techIcons[tech] || tech.charAt(0)}
-                      {tech}
+                      {techIcons[tech] || tech.charAt(0)} {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              {index < sortedExperience.length - 1 && (
-                <div className="timeline-connector">
-                  <div className="connector-line"></div>
-                  <div className="connector-arrow">→</div>
-                </div>
-              )}
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </div>
   );

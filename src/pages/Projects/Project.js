@@ -2,7 +2,10 @@ import { FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
 import "./Projects.css";
 
-function ProjectCard({ title, description, techStack, link, index }) {
+function ProjectCard({ title, description, skills, link, year, awards, index }) {
+  // Convert skills string into array
+  const techStack = skills.split(",").map(skill => skill.trim());
+
   return (
     <motion.div
       className="project-card"
@@ -14,6 +17,7 @@ function ProjectCard({ title, description, techStack, link, index }) {
       <div className="card-content">
         <div className="card-header">
           <h2>{title}</h2>
+          {year && <span className="project-year">📅 {year}</span>}
         </div>
         <p className="project-description">{description}</p>
         <div className="tech-stack">
@@ -21,6 +25,9 @@ function ProjectCard({ title, description, techStack, link, index }) {
             <span key={i} className="tech-pill">{tech}</span>
           ))}
         </div>
+        {awards && awards.trim() !== "" && (
+          <p className="project-awards">🏆 {awards}</p>
+        )}
         {link && (
           <a 
             href={link} 
@@ -37,9 +44,9 @@ function ProjectCard({ title, description, techStack, link, index }) {
   );
 }
 
-export default function Projects({ projects = [] }) {
-  // Limit to 4 projects for no-scroll layout
-  const displayedProjects = projects.slice(0, 4);
+export default function Projects({ projects = {} }) {
+  const megaProjects = projects.mega || [];
+  const miniProjects = projects.mini || [];
 
   return (
     <section className="projects-container" id="projects">
@@ -48,11 +55,29 @@ export default function Projects({ projects = [] }) {
         <p>Selected works that showcase my skills</p>
       </div>
 
-      <div className="projects-grid">
-        {displayedProjects.map((project, index) => (
-          <ProjectCard key={index} index={index} {...project} />
-        ))}
-      </div>
+      {/* Mega Projects */}
+      {megaProjects.length > 0 && (
+        <div className="projects-section">
+          <h2 className="section-title">🚀 Mega Projects</h2>
+          <div className="projects-grid">
+            {megaProjects.map((project, index) => (
+              <ProjectCard key={`mega-${index}`} index={index} {...project} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Mini Projects */}
+      {miniProjects.length > 0 && (
+        <div className="projects-section">
+          <h2 className="section-title">🔧 Mini Projects</h2>
+          <div className="projects-grid">
+            {miniProjects.map((project, index) => (
+              <ProjectCard key={`mini-${index}`} index={index} {...project} />
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

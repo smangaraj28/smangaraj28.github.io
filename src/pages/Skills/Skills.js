@@ -4,10 +4,17 @@ import { motion } from "framer-motion";
 import "./Skills.css";
 
 export default function Skills({ skills = [] }) {
-  // Categorize skills by proficiency level
-  const expertSkills = skills.filter(skill => skill.proficiency >= 80);
-  const proficientSkills = skills.filter(skill => skill.proficiency >= 50 && skill.proficiency < 80);
-  const learningSkills = skills.filter(skill => skill.proficiency < 50);
+  // Convert efficiency string ("80%") to number
+  const processedSkills = skills.map(skill => ({
+    ...skill,
+    proficiency: parseInt(skill.efficiency.replace("%", "")),
+    name: skill.title
+  }));
+
+  // Categorize skills
+  const expertSkills = processedSkills.filter(skill => skill.proficiency >= 80);
+  const proficientSkills = processedSkills.filter(skill => skill.proficiency >= 50 && skill.proficiency < 80);
+  const learningSkills = processedSkills.filter(skill => skill.proficiency < 50);
 
   return (
     <section className="skills-section" id="skills">
@@ -73,6 +80,7 @@ const SkillCard = ({ skill, delay }) => {
       </div>
       <div className="skill-content">
         <h3>{skill.name}</h3>
+        <p className="skill-description">{skill.description}</p>
         <div className="progress-container">
           <CircularProgressbar
             value={skill.proficiency}

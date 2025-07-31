@@ -3,21 +3,29 @@ import { MdPersonOutline, MdOutlineEvent, MdWorkOutline } from "react-icons/md";
 import { BiMailSend } from "react-icons/bi";
 import Links from "../Links/Links";
 
-export default function About({ personalInfo = {}, contactInfo = {} }) {
-  const { fullName = "", email = "", dob = "", title = "", company = "", professionalSummary = "" } = personalInfo;
+export default function About({ personal = {}, links = {} }) {
+  const { 
+    name = "", 
+    email = "", 
+    dob = "", 
+    title = "", 
+    company = "", 
+    details = "" 
+  } = personal;
 
   const formatDate = (dateString) => {
     if (!dateString) return "";
-    const date = new Date(dateString);
+    const [day, month, year] = dateString.split("-");
+    const date = new Date(`${year}-${month}-${day}`);
     if (isNaN(date)) return dateString;
 
-    const day = date.getDate();
-    const month = date.toLocaleString("en-US", { month: "short" });
-    const year = date.getFullYear();
+    const d = date.getDate();
+    const monthName = date.toLocaleString("en-US", { month: "short" });
+    const y = date.getFullYear();
 
-    const suffix = (d) => {
-      if (d > 3 && d < 21) return "th";
-      switch (d % 10) {
+    const suffix = (dayNum) => {
+      if (dayNum > 3 && dayNum < 21) return "th";
+      switch (dayNum % 10) {
         case 1: return "st";
         case 2: return "nd";
         case 3: return "rd";
@@ -25,7 +33,7 @@ export default function About({ personalInfo = {}, contactInfo = {} }) {
       }
     };
 
-    return `${day}${suffix(day)} ${month} ${year}`;
+    return `${d}${suffix(d)} ${monthName} ${y}`;
   };
 
   return (
@@ -43,14 +51,14 @@ export default function About({ personalInfo = {}, contactInfo = {} }) {
         <div className="content-wrapper">
           <h1 className="name-heading">About <span>Me</span></h1>
           
-          <p className="summary-text">{professionalSummary}</p>
+          <p className="summary-text">{details}</p>
           
           <div className="info-grid">
             <div className="info-item">
               <MdPersonOutline className="info-icon" />
               <div>
                 <h3>Full Name</h3>
-                <p>{fullName}</p>
+                <p>{name}</p>
               </div>
             </div>
             
@@ -80,7 +88,7 @@ export default function About({ personalInfo = {}, contactInfo = {} }) {
           </div>
           
           <div className="links-container">
-            <Links {...contactInfo} />
+            <Links {...links} />
           </div>
         </div>
       </div>

@@ -13,11 +13,11 @@ const EMAILJS_CONFIG = {
   PUBLIC_KEY: "9jJfHD1i1p5n9lTqx"
 };
 
-export default function Contact({ personalInfo = {}, contactInfo = {} }) {
-  const [formData, setFormData] = useState({ 
+export default function Contact({ personal = {}, links = {} }) {
+  const [formData, setFormData] = useState({
     name: "",
-    email: "", 
-    message: "" 
+    email: "",
+    message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -71,7 +71,7 @@ export default function Contact({ personalInfo = {}, contactInfo = {} }) {
   };
 
   const socialLinks = [
-    { icon: <FaLinkedin />, url: contactInfo.linkedin, name: "LinkedIn" }
+    { icon: <FaLinkedin />, url: links.linkedin, name: "LinkedIn" }
   ].filter(link => link.url);
 
   return (
@@ -96,8 +96,8 @@ export default function Contact({ personalInfo = {}, contactInfo = {} }) {
                 </div>
                 <div className="info-content">
                   <span className="info-label">Email</span>
-                  <a href={`mailto:${personalInfo.email}`} className="info-value">
-                    {personalInfo.email || "example@email.com"}
+                  <a href={`mailto:${personal.email}`} className="info-value">
+                    {personal.email || "example@email.com"}
                   </a>
                 </div>
               </div>
@@ -109,18 +109,18 @@ export default function Contact({ personalInfo = {}, contactInfo = {} }) {
                 <div className="info-content">
                   <span className="info-label">Location</span>
                   <p className="info-value">
-                    {personalInfo.address ? 
-                      `${personalInfo.address.city}, ${personalInfo.address.country}` : 
+                    {personal.address ? 
+                      `${personal.address}` : 
                       "City, Country"}
                   </p>
                 </div>
               </div>
 
-              {socialLinks.length > 0 && (
+              {links.length > 0 && (
                 <div className="social-section">
                   <p className="social-title">Connect with me</p>
                   <div className="social-links">
-                    {socialLinks.map((link, index) => (
+                    {links.map((link, index) => (
                       <a
                         key={index}
                         href={link.url}

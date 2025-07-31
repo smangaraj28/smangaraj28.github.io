@@ -4,37 +4,42 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import WorkExperience from "./pages/WorkExperience/WorkExperience";
+// import Teaching from "./pages/Teaching/Teaching";
+// import Education from "./pages/Education/Education";
 import Project from "./pages/Projects/Project";
 import Contact from "./pages/Contact/Contact";
 import Navbar from "./components/layout/Navbar/Navbar";
-import Footer from "./pages/Footer/Footer";
 import Context from "./Data/data";
 import { useDarkMode } from "./contexts/DarkModeContext";
 import Gallery from "./pages/Gallery/Gallery";
 
 export default function App() {
-  const { personalInfo, contactInfo, technicalSkills, workExperience, projects } = useContext(Context);
+  const { personal, links, employement, teaching, education, projects, skills } = useContext(Context);
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [currentPage, setCurrentPage] = useState("Home");
 
   const renderPage = () => {
-    switch(currentPage) {
+    switch (currentPage) {
       case "Home":
-        return <Home personalInfo={personalInfo} contactInfo={contactInfo} />;
+        return <Home personal={personal} links={links} />;
       case "About":
-        return <About personalInfo={personalInfo} contactInfo={contactInfo} />;
+        return <About personal={personal} links={links} />;
       case "Skills":
-        return <Skills skills={technicalSkills} />;
+        return <Skills skills={skills} />;
       case "WorkExperience":
-        return <WorkExperience workExperience={workExperience} />;
+        return <WorkExperience employement={employement} />;
+      // case "Teaching":
+        // return <Teaching teaching={teaching} />;
+      // case "Education":
+        // return <Education education={education} />;
       case "Projects":
         return <Project projects={projects} />;
       case "Gallery":
         return <Gallery />;
       case "Contact":
-        return <Contact personalInfo={personalInfo} contactInfo={contactInfo} />;
+        return <Contact personal={personal} links={links} />;
       default:
-        return <Home personalInfo={personalInfo} contactInfo={contactInfo} />;
+        return <Home personal={personal} links={links} />;
     }
   };
 
@@ -44,8 +49,6 @@ export default function App() {
         {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
       </button>
       {renderPage()}
-
-      {/* <Footer /> */}
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
     </div>
   );

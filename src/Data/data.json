@@ -1,124 +1,205 @@
 {
-    "personalInfo": {
-      "fullName": "Soumya Sambit Mangaraj",
-      "email": "smangaraj28@gmail.com",
-      "dob": "1996-02-28",
-      "title": "Senior Software Engineer",
-      "company": "Oracle Cloud ( OCI ) ",
-      "resumeUrl": "https://drive.google.com/file/d/1OhEx2sSWkRf03yorIz6WS-BRKGURwRKj/view?usp=sharing",
-      "address": {
-        "street": "Mangaraj Bhavan, Near Park Land Hospital",
-        "city": "Khordha",
-        "state": "Odisha",
-        "country": "India",
-        "postalCode": "752055"
-      },
-      "bio": "Engineer by Profession 🧑🏽‍💻 & Teacher by Passion ❤️",
-      "professionalSummary": "Strong believer in work, not designation. Passionate about mentoring and helping individuals grow in the field of computer science."
+  "personal": {
+    "name": "Soumya Sambit Mangaraj",
+    "email": "smangaraj28@gmail.com",
+    "dob": "28-02-1996",
+    "title": "Software Engineer",
+    "company": "Oracle Cloud (OCI)",
+    "resumeLink": "https://drive.google.com/file/d/1Z_6C-siGKSaoOMYqaxtbudiJkTaXI4UN/view?usp=sharing",
+    "address": "Khordha, Odisha, India, 752055",
+    "mapLink": "",
+    "keywords": ["Engineer by Profession 🧑🏽‍💻 & Teacher by Passion ❤️"],
+    "currentStatus": "Senior Software Development Engineer at Oracle Cloud",
+    "details": "Strong believer in work, not designation. Passionate about mentoring and helping individuals grow in the field of computer science."
+  },
+  "employement": [
+    {
+      "company": "ADP",
+      "designation": "Full Stack Developer",
+      "startPeriod": "Aug-2018",
+      "endingPeriod": "Dec-2020",
+      "description": "🏢 Contributed to payroll and HR systems that helped organizations manage employees and payroll efficiently.",
+      "awards": "",
+      "techstack": "Java, Springboot, AWS, Angular JS",
+      "location": "Hyderabad, India"
     },
-    "contactInfo": {
-      "linkedin": "https://www.linkedin.com/in/soumya-sambit-mangaraj/",
-      "github": "https://github.com/smangaraj28",
-      "twitter": "",
-      "instagram": "https://www.instagram.com/soumyasambitmangaraj/",
-      "facebook": "https://www.facebook.com/soumyasambit.mangaraj/",
-      "whatsapp": "",
-      "stackblitz": "https://stackblitz.com/@smangaraj28",
-      "codesandbox": "https://codesandbox.io/u/smangaraj28"
+    {
+      "company": "Delhivery",
+      "designation": "Software Developer",
+      "startPeriod": "Jan-2021",
+      "endingPeriod": "Oct-2021",
+      "description": "📦 Developed tools for package billing and tracking, improving delivery transparency for customers.",
+      "awards": "",
+      "techstack": "Python, Django, AWS, Java, Springboot, Node Js",
+      "location": "Hyderabad, India"
     },
-    "workExperience": [
-      {
-        "company": "ADP",
-        "role": "Full Stack Developer",
-        "startDate": "2018-08",
-        "endDate": "2020-12",
-        "techStack": ["Java", "Spring Boot", "AWS", "AngularJS"]
-      },
-      {
-        "company": "Delhivery",
-        "role": "Full Stack Developer",
-        "startDate": "2021-01",
-        "endDate": "2021-10",
-        "techStack": ["Python", "Django", "AWS", "Java", "Spring Boot", "Node.js"]
-      },
-      {
-        "company": "PayPal",
-        "role": "Senior Software Development Engineer",
-        "startDate": "2021-10",
-        "endDate": "2023-05",
-        "techStack": ["Java", "Spring Boot", "Node.js", "React", "GCP"]
-      },
-      {
-        "company": "Goldman Sachs",
-        "role": "Associate Software Engineer",
-        "startDate": "2023-05",
-        "endDate": "2024-06",
-        "techStack": ["Java", "Spring Boot", "Big Data", "Hadoop", "MapReduce", "HBase", "HDFS"]
-      },
-      {
-        "company": "Oracle Cloud (OCI) ",
-        "role": "Senior Software Development Engineer",
-        "startDate": "2024-07",
-        "techStack": ["Java", "Spring Boot", "OCI"]
-      }
-    ],
-    "projects": [
+    {
+      "company": "PayPal",
+      "designation": "Senior Software Development Engineer",
+      "startPeriod": "Oct-2021",
+      "endingPeriod": "May-2023",
+      "description": "💳 Improved dispute resolution and payment experience, helping users resolve payment issues smoothly.",
+      "awards": "",
+      "techstack": "Java, Springboot, Node Js, React, GCP",
+      "location": "Chennai, India"
+    },
+    {
+      "company": "Goldman Sachs",
+      "designation": "Senior Software Development Engineer",
+      "startPeriod": "May-2023",
+      "endingPeriod": "Jun-2024",
+      "description": "🔍 Developed surveillance and compliance solutions to ensure adherence to financial regulations.",
+      "awards": "",
+      "techstack": "Java, Springboot, Big Data, Hadoop, MapReduce, HBase, HDFS",
+      "location": "Bengaluru, India"
+    },
+    {
+      "company": "Oracle Cloud (OCI)",
+      "designation": "Senior Software Development Engineer",
+      "startPeriod": "Jul-2024",
+      "endingPeriod": "Present",
+      "description": "🚀 Leading AI-driven Data Platform initiatives to enhance cloud-based data processing and management.",
+      "awards": "",
+      "techstack": "Java, Springboot, OCI Cloud",
+      "location": "Bengaluru, India"
+    }
+  ],
+  "teaching": [
+    {
+      "company": "Scaler",
+      "designation": "Computer Science Instructor",
+      "type": "Part-time",
+      "startPeriod": "Feb-2023",
+      "endingPeriod": "Mar-2024",
+      "description": "📘 Trained 500+ learners in Data Structures and System Design through interactive sessions and real-world problem-solving.",
+      "awards": "",
+      "skills": "Data Structures, System Design",
+      "location": "Remote"
+    },
+    {
+      "company": "Bosscoder Academy",
+      "designation": "Teacher",
+      "type": "Part-time",
+      "startPeriod": "Jun-2022",
+      "endingPeriod": "Jan-2023",
+      "description": "👨‍🏫 Taught programming fundamentals and mentored students for technical interviews.",
+      "awards": "",
+      "skills": "Programming Fundamentals, Interview Preparation",
+      "location": "Remote"
+    },
+    {
+      "company": "Newton School",
+      "designation": "Computer Science Mentor",
+      "type": "Part-time",
+      "startPeriod": "Jan-2021",
+      "endingPeriod": "Dec-2022",
+      "description": "🧑‍💻 Guided students in understanding core computer science concepts and assisted them in career transitions.",
+      "awards": "",
+      "skills": "Computer Science Mentorship",
+      "location": "Remote"
+    }
+  ],
+  "education": [
+    {
+      "institution": "XYZ High School",
+      "level": "10th",
+      "year": "2011",
+      "description": "Completed secondary education with distinction.",
+      "awards": ""
+    },
+    {
+      "institution": "XYZ Junior College",
+      "level": "12th",
+      "year": "2013",
+      "description": "Completed higher secondary education in Science stream.",
+      "awards": ""
+    },
+    {
+      "institution": "ABC University",
+      "level": "BTech in Computer Science",
+      "year": "2017",
+      "description": "Graduated with a Bachelor's degree in Computer Science and Engineering.",
+      "awards": ""
+    },
+    {
+      "institution": "ABC University",
+      "level": "MTech in Computer Science",
+      "year": "2019",
+      "description": "Completed Master's degree specializing in Software Engineering.",
+      "awards": ""
+    }
+  ],
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/soumya-sambit-mangaraj/",
+    "facebook": "https://www.facebook.com/soumyasambit.mangaraj/",
+    "instagram": "https://www.instagram.com/soumyasambitmangaraj/",
+    "whatsapp": "",
+    "twitter": "",
+    "github": "https://github.com/smangaraj28",
+    "stackblitz": "https://stackblitz.com/@smangaraj28",
+    "sandbox": "https://codesandbox.io/u/smangaraj28"
+  },
+  "projects": {
+    "mega": [
       {
         "title": "Universal Hotel Solution",
-        "type": "Mega Project",
-        "description": "Developed using Angular8 & Python Flask with PostgreSQL, Travis CI, and Docker. Designed for hotel management solutions from small to large scale. Implemented 3-way data binding using Angular & Firebase and OAuth2 authentication.",
-        "techStack": ["React Native", "Angular", "Python", "Flask", "PostgreSQL"],
-        "link": "https://docs.google.com/document/d/1ceKJlsidtzayzkLIDJIm-9Jag0rtBMr205f-gP-1cO8/edit?usp=sharing"
-      },
-      {
-        "title": "Personal Portfolio",
-        "type": "Mini Project",
-        "description": "Personal portfolio showcasing projects, resume, and more.",
-        "techStack": ["React.js"],
-        "link": "https://gksjfg.csb.app/"
+        "description": "Developed a hotel management solution with modern UI and backend automation for handling bookings, staff management, and reporting.",
+        "skills": "Angular, Flask, PostgreSQL, Docker",
+        "link": "https://docs.google.com/document/d/1ceKJlsidtzayzkLIDJIm-9Jag0rtBMr205f-gP-1cO8/edit?usp=sharing",
+        "year": "Final Year Project",
+        "awards": ""
       }
     ],
-    "technicalSkills": [
+    "mini": [
       {
-        "name": "Python",
-        "proficiency": "80",
-        "description": "Strong understanding of functions, loops, arrays, and object-oriented programming."
-      },
-      {
-        "name": "JavaScript",
-        "proficiency": "70",
-        "description": "Advanced level JavaScript."
-      },
-      {
-        "name": "Java",
-        "proficiency": "90",
-        "description": "Deep understanding of functions, loops, arrays, and object-oriented programming."
-      },
-      {
-        "name": "React",
-        "proficiency": "80",
-        "description": "Experience with React components, hooks, and state management."
-      },
-      {
-        "name": "Spring Boot",
-        "proficiency": "80",
-        "description": "Building scalable Java-based microservices."
-      },
-      {
-        "name": "Hadoop",
-        "proficiency": "60",
-        "description": "Understanding of distributed computing and big data processing."
-      },
-      {
-        "name": "HBase",
-        "proficiency": "60",
-        "description": "Experience with NoSQL database for real-time big data applications."
-      },
-      {
-        "name": "MapReduce",
-        "proficiency": "60",
-        "description": "Familiarity with writing MapReduce jobs for large-scale data processing."
+        "title": "Personal Portfolio",
+        "description": "A responsive portfolio showcasing personal projects, skills, and career journey.",
+        "skills": "React",
+        "link": "https://gksjfg.csb.app/",
+        "awards": ""
       }
     ]
+  },
+  "skills": [
+    {
+      "title": "Python",
+      "efficiency": "80%",
+      "description": "Proficient in Python with strong knowledge of data structures, loops, and object-oriented programming."
+    },
+    {
+      "title": "Javascript",
+      "efficiency": "70%",
+      "description": "Solid understanding of modern JavaScript, ES6 features, and building interactive web applications."
+    },
+    {
+      "title": "Java",
+      "efficiency": "90%",
+      "description": "Highly skilled in Java with expertise in backend systems and scalable application design."
+    },
+    {
+      "title": "React",
+      "efficiency": "80%",
+      "description": "Experienced in developing dynamic and responsive UI components using React."
+    },
+    {
+      "title": "Spring Boot",
+      "efficiency": "80%",
+      "description": "Strong experience building RESTful APIs and microservices with Spring Boot."
+    },
+    {
+      "title": "Hadoop",
+      "efficiency": "60%",
+      "description": "Intermediate knowledge of distributed big data processing with Hadoop."
+    },
+    {
+      "title": "HBase",
+      "efficiency": "60%",
+      "description": "Working knowledge of handling large datasets efficiently using HBase."
+    },
+    {
+      "title": "MapReduce",
+      "efficiency": "60%",
+      "description": "Capable of designing MapReduce jobs for processing and analyzing big data."
+    }
+  ]
 }
-  
