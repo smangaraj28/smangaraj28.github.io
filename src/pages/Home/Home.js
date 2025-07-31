@@ -7,8 +7,8 @@ import baba_mumy_img from "../../assets/baba_mumy_img.JPG";
 import { useState } from "react";
 
 const galleryImages = [
-  profile_img,
-  baba_mumy_img
+  baba_mumy_img,
+  profile_img
 ];
 
 export default function Home({ personal = {}, links = {} }) {
