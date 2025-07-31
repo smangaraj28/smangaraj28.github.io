@@ -77,7 +77,6 @@ export default function Home({ personal = {}, links = {} }) {
               </span>
             </div>
             <div className="title-row">
-              <FaChalkboardTeacher className="title-icon" />
               <span className="title-text">
                 {keywords}
               </span>

@@ -34,7 +34,7 @@ const getCompanyLogoUrl = (company) => {
 const formatDate = (dateString) => {
   if (!dateString || dateString.toLowerCase() === "present") return "Present";
   const date = new Date(dateString.replace(/-/g, " "));
-  if (isNaN(date)) return dateString; 
+  if (isNaN(date)) return dateString;
   return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 };
 
@@ -49,20 +49,12 @@ export default function WorkExperience({ employement }) {
         <h1>Professional Journey</h1>
         <p>My career timeline and key milestones</p>
       </div>
+
       <div className="vertical-timeline">
         {sortedExperience.map((exp, index) => {
           const techArray = exp.techstack.split(",").map(t => t.trim());
           return (
-            <div
-              key={index}
-              className={`vertical-timeline-item ${index % 2 === 0 ? "left" : "right"}`}
-            >
-              {/* Dates */}
-              <div className="timeline-left">
-                {formatDate(exp.startPeriod)} <br /> - <br /> {formatDate(exp.endingPeriod)}
-              </div>
-
-              {/* Card */}
+            <div key={index} className="vertical-timeline-item">
               <div className="timeline-card">
                 <div className="timeline-header-row">
                   <div className="timeline-company-info">
@@ -70,6 +62,12 @@ export default function WorkExperience({ employement }) {
                     <h3>{exp.designation}</h3>
                     <span className="location">{exp.location}</span>
                   </div>
+
+                  {/* Duration Tab */}
+                  <span className="timeline-duration">
+                    {formatDate(exp.startPeriod)} - {formatDate(exp.endingPeriod)}
+                  </span>
+
                   <img
                     src={getCompanyLogoUrl(exp.company)}
                     alt={`${exp.company} logo`}
